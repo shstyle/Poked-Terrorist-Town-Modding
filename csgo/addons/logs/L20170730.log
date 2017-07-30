@@ -1,0 +1,482 @@
+L 07/30/2017 - 18:29:02: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 18:29:02: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\config.cfg! Will be built now!
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_show_karma_on_spawn' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_show_message_earn_karma' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_show__message_lose_karmna' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_public_karma' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_private_karma_round_update' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_karma_dmg' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_karma_dmg_up' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_message_typ_karma' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_karma_killer_innocent_victim_innocent_subtract' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (5).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_karma_killer_innocent_victim_traitor_add' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (5).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_karma_killer_innocent_victim_detective_subtract' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (7).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_karma_killer_traitor_victim_innocent_add' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (2).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_karma_killer_traitor_victim_traitor_subtract' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (5).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_karma_killer_traitor_victim_detective_add' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (3).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_karma_killer_detective_victim_innocent_subtract' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (3).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_karma_killer_detective_victim_traitor_add' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (7).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_karma_killer_detective_victim_detective_subtract' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (7).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_start_karma' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (100).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_with_karma_ban' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (75).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_with_karma_ban_length' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (10080).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_max_karma' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (150).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_required_players_detective' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (6).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_required_player' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (3).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_traitor_max' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (32).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_detective_max' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (32).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_detective_karma_min' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (100).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_block_suicide' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_block_grenade_message' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_block_radio_message' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_show_death_message' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_show_kill_message' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_allow_flash' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_block_look_at_weapon' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_enable_noblock' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_kad_remover' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_plugin_tag' in addons\sourcemod\configs\ttt\config.cfg! Adding default value ({orchid}[{green}T{darkred}T{blue}T{orchid}]{lightgreen} %T).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_spawn_t' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (100).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_spawn_d' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (100).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_spawn_i' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (100).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_rules_close_punishment' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_time_to_read_detective_rules' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (15).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_time_to_read_rules' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (30).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_show_detective_menu' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_show_rules_menu' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_punish_innocent_for_rdm_kils' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (3).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_punish_traitor_for_rdm_kils' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_punish_detective_for_rdm_kils' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (5).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_kick_immunity' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (bz).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_logs_access' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (bz).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_logs_dead_only' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_logs_notify_alive' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_update_client_model' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_remove_hostages' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_remove_bomb_on_spawn' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_role_again' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_traitor_ratio' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (25).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_detective_ratio' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (13).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_deny_fire' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_slay_after_start' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_disable_buyzone' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_force_teams' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:02: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_random_winner' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_force_models' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_end_with_detective' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_hide_teams' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_strip_weapons' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_after_round_delay' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (7.000000).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_next_round_alert' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_end_round_dm' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_ignore_deaths' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_ignore_rdm_slay' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_dead_players_can_see_other_roles' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_t_chat_to_dead' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_d_chat_to_dead' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_transfer_armor' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_respawn_dead_players' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_enable_damage_before_round_start' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_forced_model_ct' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (models/player/ctm_st6.mdl).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_forced_model_t' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (models/player/tm_phoenix.mdl).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_log_file' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (logs/ttt/ttt-<DATE>.log).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_error_file' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (logs/ttt/ttt-error-<DATE>.log).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_log_date_format' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (%y-%m-%d).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_default_primary_d' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (weapon_m4a1_silencer).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_default_secondary' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (weapon_glock).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_round_started_font_size' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (32).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_round_started_font_color' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (44ff22).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_round_start_font_size' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (24).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_round_start_font_color' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (ffA500).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_show_traitor_names' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_give_weapons_on_failed_start' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_give_weapons_fail_start_primary' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (ak47).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_give_weapons_fail_start_secondary' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (deagle).
+L 07/30/2017 - 18:29:03: [ttt\ttt.smx] [CONFIG LOADER] Can't find setting 'ttt_show_debug_messages' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\buyRoles.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_traitor_name' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (Buy Traitor Role).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_traitor_instantly_name' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (Buy Traitor Role Instantly).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_detective_name' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (Buy Detective Role).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_detective_instantly_name' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (Buy Detective Role Instantly).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_traitor_price' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_traitor_instantly_price' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (40000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_detective_price' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_detective_instantly_price' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (10000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_traitor_prio' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_traitor_instantly_prio' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_detective_prio' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_buyRoles.smx] [CONFIG LOADER] Can't find setting 'broles_detective_instantly_prio' in addons\sourcemod\configs\ttt\buyRoles.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\c4_jihad.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'c4_name' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (C4).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'c4_price' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'c4_sort_prio' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'c4_count' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'c4_shake_radius' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (5000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'c4_damage_radius' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (850).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'jihad_name' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (Jihad Bomb).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'jihad_price' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'jihad_sort_prio' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'jihad_preparing_time' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (60.000000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'remove_bomb_on_spawn' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'jihad_damage_radius' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (600).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'c4_magnitude' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (850).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'jihad_magnitude' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (1000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_c4_jihad.smx] [CONFIG LOADER] Can't find setting 'c4_kill_radius' in addons\sourcemod\configs\ttt\c4_jihad.cfg! Adding default value (275.000000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_decoy_teleport.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\decoy_teleporter.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_decoy_teleport.smx] [CONFIG LOADER] Can't find setting 'dt_name' in addons\sourcemod\configs\ttt\decoy_teleporter.cfg! Adding default value (Decoy Teleprter).
+L 07/30/2017 - 18:29:03: [ttt\ttt_decoy_teleport.smx] [CONFIG LOADER] Can't find setting 'dt_traitor_price' in addons\sourcemod\configs\ttt\decoy_teleporter.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_decoy_teleport.smx] [CONFIG LOADER] Can't find setting 'dt_detective_price' in addons\sourcemod\configs\ttt\decoy_teleporter.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_decoy_teleport.smx] [CONFIG LOADER] Can't find setting 'dt_traitor_sort_prio' in addons\sourcemod\configs\ttt\decoy_teleporter.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_decoy_teleport.smx] [CONFIG LOADER] Can't find setting 'dt_detective_sort_prio' in addons\sourcemod\configs\ttt\decoy_teleporter.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_decoy_teleport.smx] [CONFIG LOADER] Can't find setting 'dt_traitor_count' in addons\sourcemod\configs\ttt\decoy_teleporter.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:03: [ttt\ttt_decoy_teleport.smx] [CONFIG LOADER] Can't find setting 'dt_detective_count' in addons\sourcemod\configs\ttt\decoy_teleporter.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:03: [ttt\ttt_decoy_teleport.smx] [CONFIG LOADER] Can't find setting 'dt_refund' in addons\sourcemod\configs\ttt\decoy_teleporter.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_dnascanner.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\dnascanner.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_dnascanner.smx] [CONFIG LOADER] Can't find setting 'dna_name' in addons\sourcemod\configs\ttt\dnascanner.cfg! Adding default value (Dnascanner).
+L 07/30/2017 - 18:29:03: [ttt\ttt_dnascanner.smx] [CONFIG LOADER] Can't find setting 'dna_price' in addons\sourcemod\configs\ttt\dnascanner.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_dnascanner.smx] [CONFIG LOADER] Can't find setting 'dna_sort_prio' in addons\sourcemod\configs\ttt\dnascanner.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_fakebody.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\fakebody.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_fakebody.smx] [CONFIG LOADER] Can't find setting 'fb_name' in addons\sourcemod\configs\ttt\fakebody.cfg! Adding default value (Fakebody).
+L 07/30/2017 - 18:29:03: [ttt\ttt_fakebody.smx] [CONFIG LOADER] Can't find setting 'fb_price' in addons\sourcemod\configs\ttt\fakebody.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_fakebody.smx] [CONFIG LOADER] Can't find setting 'fb_count' in addons\sourcemod\configs\ttt\fakebody.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:03: [ttt\ttt_fakebody.smx] [CONFIG LOADER] Can't find setting 'fb_sort_prio' in addons\sourcemod\configs\ttt\fakebody.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_fakebody.smx] [CONFIG LOADER] Can't find setting 'fb_allow_proof_by_all' in addons\sourcemod\configs\ttt\fakebody.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:03: [ttt\ttt_fakebody.smx] [CONFIG LOADER] Can't find setting 'fb_show_fake_message' in addons\sourcemod\configs\ttt\fakebody.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt_fakebody.smx] [CONFIG LOADER] Can't find setting 'fb_delete_fakebody_after_found' in addons\sourcemod\configs\ttt\fakebody.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt_glow.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\glow.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_glow.smx] [CONFIG LOADER] Can't find setting 'glow_detective_enable' in addons\sourcemod\configs\ttt\glow.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:03: [ttt\ttt_glow.smx] [CONFIG LOADER] Can't find setting 'glow_traitor_enable' in addons\sourcemod\configs\ttt\glow.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:03: [ttt\ttt_grabbermod.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\grabbermod.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_grabbermod.smx] [CONFIG LOADER] Can't find setting 'gbm_colored' in addons\sourcemod\configs\ttt\grabbermod.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:03: [ttt\ttt_grabbermod.smx] [CONFIG LOADER] Can't find setting 'gbm_block_jump' in addons\sourcemod\configs\ttt\grabbermod.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:03: [ttt\ttt_healthshot.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\healthshot.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_healthshot.smx] [CONFIG LOADER] Can't find setting 'hs_name' in addons\sourcemod\configs\ttt\healthshot.cfg! Adding default value (Healthshot).
+L 07/30/2017 - 18:29:03: [ttt\ttt_healthshot.smx] [CONFIG LOADER] Can't find setting 'hs_traitor_price' in addons\sourcemod\configs\ttt\healthshot.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_healthshot.smx] [CONFIG LOADER] Can't find setting 'hs_detective_price' in addons\sourcemod\configs\ttt\healthshot.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_healthshot.smx] [CONFIG LOADER] Can't find setting 'hs_innocent_price' in addons\sourcemod\configs\ttt\healthshot.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_healthshot.smx] [CONFIG LOADER] Can't find setting 'hs_traitor_count' in addons\sourcemod\configs\ttt\healthshot.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:03: [ttt\ttt_healthshot.smx] [CONFIG LOADER] Can't find setting 'hs_detective_count' in addons\sourcemod\configs\ttt\healthshot.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:03: [ttt\ttt_healthshot.smx] [CONFIG LOADER] Can't find setting 'hs_innocent_count' in addons\sourcemod\configs\ttt\healthshot.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:03: [ttt\ttt_healthshot.smx] [CONFIG LOADER] Can't find setting 'hs_traitor_sort_prio' in addons\sourcemod\configs\ttt\healthshot.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_healthshot.smx] [CONFIG LOADER] Can't find setting 'hs_detective_sort_prio' in addons\sourcemod\configs\ttt\healthshot.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_healthshot.smx] [CONFIG LOADER] Can't find setting 'hs_innocent_sort_prio' in addons\sourcemod\configs\ttt\healthshot.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_iceknife.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\iceknife.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_iceknife.smx] [CONFIG LOADER] Can't find setting 'icek_name' in addons\sourcemod\configs\ttt\iceknife.cfg! Adding default value (Ice Knife).
+L 07/30/2017 - 18:29:03: [ttt\ttt_iceknife.smx] [CONFIG LOADER] Can't find setting 'icek_price' in addons\sourcemod\configs\ttt\iceknife.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_iceknife.smx] [CONFIG LOADER] Can't find setting 'icek_count' in addons\sourcemod\configs\ttt\iceknife.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:03: [ttt\ttt_iceknife.smx] [CONFIG LOADER] Can't find setting 'icek_sort_prio' in addons\sourcemod\configs\ttt\iceknife.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_iceknife.smx] [CONFIG LOADER] Can't find setting 'icek_damage' in addons\sourcemod\configs\ttt\iceknife.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_iceknife.smx] [CONFIG LOADER] Can't find setting 'icek_freeze_traitors' in addons\sourcemod\configs\ttt\iceknife.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt_iceknife.smx] [CONFIG LOADER] Can't find setting 'icek_freeze_time' in addons\sourcemod\configs\ttt\iceknife.cfg! Adding default value (5.000000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_icon.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\icon.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_icon.smx] [CONFIG LOADER] Can't find setting 'ttt_icon_traitor_icon' in addons\sourcemod\configs\ttt\icon.cfg! Adding default value (sprites/sg_traitor_icon).
+L 07/30/2017 - 18:29:03: [ttt\ttt_icon.smx] [CONFIG LOADER] Can't find setting 'ttt_icon_detective_icon' in addons\sourcemod\configs\ttt\icon.cfg! Adding default value (sprites/sg_detective_icon).
+L 07/30/2017 - 18:29:03: [ttt\ttt_icon.smx] [CONFIG LOADER] Can't find setting 'ttt_icon_dead_admin' in addons\sourcemod\configs\ttt\icon.cfg! Adding default value (bz).
+L 07/30/2017 - 18:29:03: [ttt\ttt_id.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\id.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_id.smx] [CONFIG LOADER] Can't find setting 'id_traitor_price' in addons\sourcemod\configs\ttt\id.cfg! Adding default value (1000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_id.smx] [CONFIG LOADER] Can't find setting 'id_innocent_price' in addons\sourcemod\configs\ttt\id.cfg! Adding default value (1000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_id.smx] [CONFIG LOADER] Can't find setting 'id_traitor_sort_prio' in addons\sourcemod\configs\ttt\id.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_id.smx] [CONFIG LOADER] Can't find setting 'id_innocent_sort_prio' in addons\sourcemod\configs\ttt\id.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:03: [ttt\ttt_id.smx] [CONFIG LOADER] Can't find setting 'id_cooldown_time' in addons\sourcemod\configs\ttt\id.cfg! Adding default value (0.000000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\overlay.cfg! Will be built now!
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_overlay_detective' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (darkness/ttt/overlayDetective).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_overlay_traitor' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (darkness/ttt/overlayTraitor).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_overlay_inno' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (darkness/ttt/overlayInnocent).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_overlay_detective_win' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (overlays/ttt/detectives_win).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_overlay_traitor_win' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (overlays/ttt/traitors_win).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_overlay_inno_win' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (overlays/ttt/innocents_win).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_enable' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_remaining_x_position' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (0.280000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_detective_x_position' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (0.370000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_innocent_x_position' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (0.479999).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_traitor_x_position' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (0.586000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_remaining_y_position' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (0.000000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_detective_y_position' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (0.000000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_innocent_y_position' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (0.000000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_traitor_y_position' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (0.000000).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_remaining_color' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (255;255,255).
+L 07/30/2017 - 18:29:03: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_detective_color' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (0;0;255).
+L 07/30/2017 - 18:29:04: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_innocent_color' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (0;255;0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_overlay.smx] [CONFIG LOADER] Can't find setting 'ttt_hud_text_traitor_color' in addons\sourcemod\configs\ttt\overlay.cfg! Adding default value (255;0;0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_playerhud.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\hud.cfg! Will be built now!
+L 07/30/2017 - 18:29:04: [ttt\ttt_playerhud.smx] [CONFIG LOADER] Can't find setting 'hud_display_detective' in addons\sourcemod\configs\ttt\hud.cfg! Adding default value ({NAME}: {PLAYERNAME}
+{KARMA}: {PLAYERKARMA}).
+L 07/30/2017 - 18:29:04: [ttt\ttt_playerhud.smx] [CONFIG LOADER] Can't find setting 'hud_display_innocent' in addons\sourcemod\configs\ttt\hud.cfg! Adding default value ({NAME}: {PLAYERNAME}
+{KARMA}: {PLAYERKARMA}).
+L 07/30/2017 - 18:29:04: [ttt\ttt_playerhud.smx] [CONFIG LOADER] Can't find setting 'hud_display_traitor' in addons\sourcemod\configs\ttt\hud.cfg! Adding default value ({NAME}: {PLAYERNAME}
+{KARMA}: {PLAYERKARMA}).
+L 07/30/2017 - 18:29:04: [ttt\ttt_playerhud.smx] [CONFIG LOADER] Can't find setting 'hud_display_unassigned' in addons\sourcemod\configs\ttt\hud.cfg! Adding default value ({NAME}: {PLAYERNAME}
+{KARMA}: {PLAYERKARMA}).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\shop.cfg! Will be built now!
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_sort_items' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_killer_innocent_victim_innocent_subtract' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (1500).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_killer_innocent_victim_traitor_add' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_killer_innocent_victim_detective_subtract' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (4200).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_killer_traitor_victim_innocent_add' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (600).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_killer_traitor_victim_traitor_subtract' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_killer_traitor_victim_detective_add' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (4200).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_killer_detective_victim_innocent_subtract' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (300).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_killer_detective_victim_traitor_add' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (2100).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_killer_detective_victim_detective_subtract' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (300).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_roundend_traitorlose_alive_nontraitors' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (4800).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_roundend_traitorlose_dead_nontraitors' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (1200).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_roundend_traitorwin_alive_traitors' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (4800).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_roundend_traitorwin_dead_traitors' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (1200).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_found_body_add' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (1200).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_show_message_earn_credits' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_show_message_lose_credits' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_message_typ_credits' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_start_credits' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (800).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_reset_each_round' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_timer' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_show_message' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_interval' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (60.000000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_amount_min' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (30).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_amount_max' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (90).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_menu_reopen' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_credits_command' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (credits).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_shop_buy_command' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (buyitem).
+L 07/30/2017 - 18:29:04: [ttt\ttt_shop.smx] [CONFIG LOADER] Can't find setting 'ttt_shop_show_command' in addons\sourcemod\configs\ttt\shop.cfg! Adding default value (showitems).
+L 07/30/2017 - 18:29:04: [ttt\ttt_spec_menu.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\specmenu.cfg! Will be built now!
+L 07/30/2017 - 18:29:04: [ttt\ttt_spec_menu.smx] [CONFIG LOADER] Can't find setting 'specmenu_auto_open' in addons\sourcemod\configs\ttt\specmenu.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:04: [ttt\ttt_spec_menu.smx] [CONFIG LOADER] Can't find setting 'specmenu_menu_time' in addons\sourcemod\configs\ttt\specmenu.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_sql.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\sql.cfg! Will be built now!
+L 07/30/2017 - 18:29:04: [ttt\ttt_sql.smx] [CONFIG LOADER] Can't find setting 'sql_max_retries' in addons\sourcemod\configs\ttt\sql.cfg! Adding default value (3).
+L 07/30/2017 - 18:29:04: [ttt\ttt_sql.smx] [CONFIG LOADER] Can't find setting 'sql_database_entry_name' in addons\sourcemod\configs\ttt\sql.cfg! Adding default value (ttt).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\stations.cfg! Will be built now!
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'health_station_price' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'hurt_station_price' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'health_sort_prio' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'hurt_sort_prio' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'health_station_heal' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (15).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'hurt_station_damage' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (25).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'health_station_charges' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (10).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'hurt_station_charges' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (15).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'health_station_distance' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (200.000000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'hurt_station_distance' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (200.000000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'hurt_station_hurt_other_traitors' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'health_station_max_health' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (125).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'health_station_name' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (Health Station).
+L 07/30/2017 - 18:29:04: [ttt\ttt_stations.smx] [CONFIG LOADER] Can't find setting 'hurt_station_name' in addons\sourcemod\configs\ttt\stations.cfg! Adding default value (Hurt Station).
+L 07/30/2017 - 18:29:04: [ttt\ttt_tagrenade.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\tagrenade.cfg! Will be built now!
+L 07/30/2017 - 18:29:04: [ttt\ttt_tagrenade.smx] [CONFIG LOADER] Can't find setting 'tag_name' in addons\sourcemod\configs\ttt\tagrenade.cfg! Adding default value (TA-Grenade).
+L 07/30/2017 - 18:29:04: [ttt\ttt_tagrenade.smx] [CONFIG LOADER] Can't find setting 'tag_traitor_price' in addons\sourcemod\configs\ttt\tagrenade.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_tagrenade.smx] [CONFIG LOADER] Can't find setting 'tag_traitor_count' in addons\sourcemod\configs\ttt\tagrenade.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:04: [ttt\ttt_tagrenade.smx] [CONFIG LOADER] Can't find setting 'tag_traitor_sort_prio' in addons\sourcemod\configs\ttt\tagrenade.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_tagrenade.smx] [CONFIG LOADER] Can't find setting 'tag_tagrenade_distance' in addons\sourcemod\configs\ttt\tagrenade.cfg! Adding default value (1000.000000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_tagrenade.smx] [CONFIG LOADER] Can't find setting 'tag_tagrenade_time' in addons\sourcemod\configs\ttt\tagrenade.cfg! Adding default value (3.500000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_tagrenade.smx] [CONFIG LOADER] Can't find setting 'tag_players_behind_walls' in addons\sourcemod\configs\ttt\tagrenade.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:04: [ttt\ttt_talk_override.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\talk_override.cfg! Will be built now!
+L 07/30/2017 - 18:29:04: [ttt\ttt_talk_override.smx] [CONFIG LOADER] Can't find setting 'tor_traitor_voice_chat' in addons\sourcemod\configs\ttt\talk_override.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ttt_hurt_traitor_with_taser' in addons\sourcemod\configs\ttt\config.cfg! Adding default value (2000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\taser.cfg! Will be built now!
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_detective_price' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_innocent_price' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_traitor_price' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_detective_sort_prio' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_innocent_sort_prio' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_traitor_sort_prio' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_detective_count' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_innocent_count' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_traitor_count' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_damage' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_traitor_damage' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_give_taser_spawn' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_broadcast_taser_result' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (false).
+L 07/30/2017 - 18:29:04: [ttt\ttt_taser.smx] [CONFIG LOADER] Can't find setting 'ta_barrel_fix' in addons\sourcemod\configs\ttt\taser.cfg! Adding default value (true).
+L 07/30/2017 - 18:29:04: [ttt\ttt_wallhack.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\wh.cfg! Will be built now!
+L 07/30/2017 - 18:29:04: [ttt\ttt_wallhack.smx] [CONFIG LOADER] Can't find setting 'wh_traitor_price' in addons\sourcemod\configs\ttt\wh.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_wallhack.smx] [CONFIG LOADER] Can't find setting 'wh_detective_price' in addons\sourcemod\configs\ttt\wh.cfg! Adding default value (9000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_wallhack.smx] [CONFIG LOADER] Can't find setting 'wh_traitor_cooldown' in addons\sourcemod\configs\ttt\wh.cfg! Adding default value (15.000000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_wallhack.smx] [CONFIG LOADER] Can't find setting 'wh_detective_cooldown' in addons\sourcemod\configs\ttt\wh.cfg! Adding default value (15.000000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_wallhack.smx] [CONFIG LOADER] Can't find setting 'wh_traitor_active' in addons\sourcemod\configs\ttt\wh.cfg! Adding default value (3.000000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_wallhack.smx] [CONFIG LOADER] Can't find setting 'wh_detective_active' in addons\sourcemod\configs\ttt\wh.cfg! Adding default value (3.000000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_wallhack.smx] [CONFIG LOADER] Can't find setting 'wh_traitor_sort_prio' in addons\sourcemod\configs\ttt\wh.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_wallhack.smx] [CONFIG LOADER] Can't find setting 'wh_detective_sort_prio' in addons\sourcemod\configs\ttt\wh.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Couldn't read file addons\sourcemod\configs\ttt\weapons.cfg! Will be built now!
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'kevlar_type' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'kevlar_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'kevlar_max' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (5).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'kevlar_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'kevlar_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (Kevlar).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'heavy_type' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'heavy_armor' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (100).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'heavy_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (10000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'heavy_max' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (5).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'heavy_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'heavy_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (Heavy).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'helm_type' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'helm_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (2000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'helm_max' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (5).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'helm_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'helm_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (Helm).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'kevhelm_type' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'kevhelm_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (2000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'kevhelm_max' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (5).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'kevhelm_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'kevhelm_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (Kevlar+Helm).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'usp_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'usp_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'usp_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (USP-S).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'ak47_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'ak47_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'ak47_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (AK47).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'deagle_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'deagle_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'deagle_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (Deagle).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'revolver_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'revolver_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'revolver_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (Revolver).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'scout_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'scout_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'scout_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (Scout).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'm4a1_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'm4a1_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'm4a1_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (M4A1-S).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'awp_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'awp_min_shots' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (1).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'awp_max_shots' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (3).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'awp_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting 'awp_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (AWP).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting '1knife_price' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (3000).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting '1knife_max' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (5).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting '1knife_sort_prio' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (0).
+L 07/30/2017 - 18:29:04: [ttt\ttt_weapons.smx] [CONFIG LOADER] Can't find setting '1knife_name' in addons\sourcemod\configs\ttt\weapons.cfg! Adding default value (1-Hit Knife).
+L 07/30/2017 - 18:32:53: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 18:32:53: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 18:33:49: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 18:33:49: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 18:35:38: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 18:35:44: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #1)!
+L 07/30/2017 - 18:35:49: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #2)!
+L 07/30/2017 - 18:35:54: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #3)!
+L 07/30/2017 - 18:35:54: [ttt\ttt_sql.smx] Last chance with sqlite. Let me try it!
+L 07/30/2017 - 18:35:54: [ttt\ttt_sql.smx] (SQL_Start) We have a connection!
+L 07/30/2017 - 18:40:26: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 18:40:26: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 18:40:31: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 18:40:36: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #1)!
+L 07/30/2017 - 18:40:41: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #2)!
+L 07/30/2017 - 18:40:46: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #3)!
+L 07/30/2017 - 18:40:46: [ttt\ttt_sql.smx] Last chance with sqlite. Let me try it!
+L 07/30/2017 - 18:40:46: [ttt\ttt_sql.smx] (SQL_Start) We have a connection!
+L 07/30/2017 - 18:45:53: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 18:45:53: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 18:45:59: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 18:46:05: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #1)!
+L 07/30/2017 - 18:46:10: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #2)!
+L 07/30/2017 - 18:46:15: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #3)!
+L 07/30/2017 - 18:46:15: [ttt\ttt_sql.smx] Last chance with sqlite. Let me try it!
+L 07/30/2017 - 18:46:15: [ttt\ttt_sql.smx] (SQL_Start) We have a connection!
+L 07/30/2017 - 19:40:38: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 19:40:38: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 19:40:49: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 19:40:54: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #1)!
+L 07/30/2017 - 19:40:59: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #2)!
+L 07/30/2017 - 19:41:04: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #3)!
+L 07/30/2017 - 19:41:04: [ttt\ttt_sql.smx] Last chance with sqlite. Let me try it!
+L 07/30/2017 - 19:41:04: [ttt\ttt_sql.smx] (SQL_Start) We have a connection!
+L 07/30/2017 - 19:41:58: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 19:42:26: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 19:42:35: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Detective"
+L 07/30/2017 - 19:42:46: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Innocent"
+L 07/30/2017 - 19:42:49: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 19:44:07: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 19:44:10: [playercommands.smx] "Console<0><Console><Console>" slayed "Ebichu<2><STEAM_1:1:224494094><>"
+L 07/30/2017 - 19:46:41: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 19:48:02: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 19:48:02: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 20:06:03: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 20:06:10: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #1)!
+L 07/30/2017 - 20:06:15: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #2)!
+L 07/30/2017 - 20:06:20: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #3)!
+L 07/30/2017 - 20:06:20: [ttt\ttt_sql.smx] Last chance with sqlite. Let me try it!
+L 07/30/2017 - 20:06:20: [ttt\ttt_sql.smx] (SQL_Start) We have a connection!
+L 07/30/2017 - 20:08:30: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 20:08:30: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 20:09:24: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 20:09:29: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #1)!
+L 07/30/2017 - 20:09:34: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #2)!
+L 07/30/2017 - 20:09:39: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #3)!
+L 07/30/2017 - 20:09:39: [ttt\ttt_sql.smx] Last chance with sqlite. Let me try it!
+L 07/30/2017 - 20:09:39: [ttt\ttt_sql.smx] (SQL_Start) We have a connection!
+L 07/30/2017 - 20:18:59: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 20:19:16: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 20:19:24: [playercommands.smx] "Console<0><Console><Console>" slayed "Ebichu<2><STEAM_1:1:224494094><>"
+L 07/30/2017 - 20:23:12: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 20:23:12: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 20:23:19: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 20:23:25: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #1)!
+L 07/30/2017 - 20:23:30: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #2)!
+L 07/30/2017 - 20:23:35: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #3)!
+L 07/30/2017 - 20:23:35: [ttt\ttt_sql.smx] Last chance with sqlite. Let me try it!
+L 07/30/2017 - 20:23:35: [ttt\ttt_sql.smx] (SQL_Start) We have a connection!
+L 07/30/2017 - 20:24:16: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 20:24:46: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 20:24:46: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 20:24:51: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 20:24:57: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #1)!
+L 07/30/2017 - 20:25:02: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #2)!
+L 07/30/2017 - 20:25:07: [ttt\ttt_sql.smx] We try again to connect to a database (Retry #3)!
+L 07/30/2017 - 20:25:07: [ttt\ttt_sql.smx] Last chance with sqlite. Let me try it!
+L 07/30/2017 - 20:25:07: [ttt\ttt_sql.smx] (SQL_Start) We have a connection!
+L 07/30/2017 - 20:34:59: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 20:34:59: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 20:36:34: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 20:37:40: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 20:39:13: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 20:46:19: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 20:46:19: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 20:46:58: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:20:45: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 22:20:45: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:20:51: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:21:42: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 22:31:36: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 22:31:36: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:31:42: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:33:11: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 22:33:38: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 22:33:38: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:33:56: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 22:33:56: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:34:03: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:37:55: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 22:37:55: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:38:02: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:39:13: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 22:39:54: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 22:39:54: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:40:01: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:40:23: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:49:39: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 22:49:39: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:49:44: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:54:40: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 22:54:40: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:54:50: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 22:56:26: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the karma of "Ebichu<2><STEAM_1:1:224494094><>" to "300"
+L 07/30/2017 - 22:59:57: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 23:04:44: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 23:04:44: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 23:04:53: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 23:32:16: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 23:32:16: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 23:32:38: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 23:33:27: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 23:34:56: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 23:37:04: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Traitor"
+L 07/30/2017 - 23:38:15: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Detective"
+L 07/30/2017 - 23:44:45: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 23:44:45: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 23:44:53: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 23:49:14: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 23:49:14: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 23:49:27: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 23:49:50: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 23:50:34: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Detective"
+L 07/30/2017 - 23:51:14: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Detective"
+L 07/30/2017 - 23:58:47: SourceMod log file session started (file "L20170730.log") (Version "1.8.0.6016")
+L 07/30/2017 - 23:58:47: -------- Mapchange to de_dust2 --------
+L 07/30/2017 - 23:58:55: -------- Mapchange to de_dust2 --------

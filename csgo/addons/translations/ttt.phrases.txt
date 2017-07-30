@@ -1,0 +1,1023 @@
+// Exported from SourceMod Translator
+// Date: 2017-06-25 06:54:50 UTC
+// Language: English (en)
+// 
+// To view other translations for this plugin, please visit:
+// http://translator.mitchdempsey.com/sourcemod_plugins/158
+//
+"Phrases"
+{
+
+	"Your karma is"
+	{
+		"#format"	"{1:i}"
+		"en"		"Your KARMA is: {orchid}{1}"
+	}
+
+	"TEAMS HAS BEEN SELECTED"
+	{
+		"en"		"TEAMS HAVE BEEN SELECTED!"
+	}
+
+	"MIN PLAYERS REQUIRED FOR PLAY"
+	{
+		"#format"	"{1:d}"
+		"en"		"MIN. PLAYERS REQUIRED TO PLAY: {orchid}{1}"
+	}
+
+	"Your Team is DETECTIVES"
+	{
+		"en"		"You are a {blue}DETECTIVE"
+	}
+
+	"Your Team is TRAITORS"
+	{
+		"en"		"You are a {darkred}TRAITOR"
+	}
+
+	"Your Team is INNOCENTS"
+	{
+		"en"		"You are {green}INNOCENT"
+	}
+
+	"Your credits is"
+	{
+		"#format"	"{1:i}"
+		"en"		"Your CREDITS are: {orchid}{1}"
+	}
+
+	"Your killer is a Traitor"
+	{
+		"en"		"Your killer was a {darkred}TRAITOR!"
+	}
+
+	"Your killer is a Detective"
+	{
+		"en"		"Your killer was a {blue}DETECTIVE!"
+	}
+
+	"Your killer is an Innocent"
+	{
+		"en"		"Your killer was {green}INNOCENT!"
+	}
+
+	"You killed a Traitor"
+	{
+		"en"		"You killed a {darkred}TRAITOR!"
+	}
+
+	"You killed a Detective"
+	{
+		"en"		"You killed a {blue}DETECTIVE!"
+	}
+
+	"You killed an Innocent"
+	{
+		"en"		"You killed a {green}INNOCENT!"
+	}
+
+	"You hurt a Traitor"
+	{
+		"#format"	"{1:N}"
+		"en"		"You have used a detector on Player {darkred}{1} {lightgreen}and he is a {darkred}TRAITOR!"
+	}
+
+	"You hurt a Detective"
+	{
+		"#format"	"{1:N}"
+		"en"		"You have used a detector on Player{blue} {1} {lightgreen}and he is a {blue}DETECTIVE!"
+	}
+
+	"You hurt an Innocent"
+	{
+		"#format"	"{1:N}"
+		"en"		"You have used a detector on Player{green} {1} {lightgreen}and he is {green}INNOCENT!"
+	}
+
+	"is possibly RDMing"
+	{
+		"#format"	"{1:N}"
+		"en"		"{darkred}{1} {lightgreen}is possibly RDMing"
+	}
+
+	"Detective scan found body"
+	{
+		"#format"	"{1:N},{2:s},{3:s}"
+		"en"		"DETECTIVE{blue} {1} {lightgreen}Scanned a body, Killer is Player{darkred} {2} {lightgreen}with weapon{orchid} {3}"
+	}
+
+	"Detective scan found body suicide"
+	{
+		"#format"	"{1:N}"
+		"en"		"DETECTIVE{blue} {1} {lightgreen}Scanned a body, player committed suicide"
+	}
+
+	"1 hit kill knife (only good for 1 shot)"
+	{
+		"#format"	"{1:d}"
+		"en"		"1 hit kill knife (only usable once) - {1}"
+	}
+
+	"FAKE ID card (type !id for show your innocence)"
+	{
+		"#format"	"{1:d}"
+		"en"		"FAKE ID card (type !id to show your innocence) - {1}"
+	}
+
+	"Health Station"
+	{
+		"#format"	"{1:d}"
+		"en"		"Health Station - {1}"
+	}
+
+	"DNA scanner (scan a dead body and show who the killer is)"
+	{
+		"#format"	"{1:d}"
+		"en"		"DNA scanner (scan a dead body and show who the killer was) - {1}"
+	}
+
+	"Kevlar"
+	{
+		"#format"	"{1:d}"
+		"en"		"Kevlar - {1}"
+	}
+
+	"Buy rol Traitor"
+	{
+		"#format"	"{1:d}"
+		"en"		"Buy role TRAITOR - {1}"
+	}
+
+	"Buy rol Detective"
+	{
+		"#format"	"{1:d}"
+		"en"		"Buy role DETECTIVE - {1}"
+	}
+
+	"ID card (type !id for show your innocence)"
+	{
+		"#format"	"{1:d}"
+		"en"		"ID card (type !id to show your innocence) - {1}"
+	}
+
+	"Please wait till your team is assigned"
+	{
+		"en"		"Please wait till your team is assigned"
+	}
+
+	"Item bought! (NEW)"
+	{
+		"#format"	"{1:i},{2:s},{3:d}"
+		"en"		"Item {2} bought for {3} credits! Remaining Credits: {1}"
+	}
+
+	"You don't have enough money"
+	{
+		"en"		"You don't have enough credits!"
+	}
+
+	"Traitors"
+	{
+		"en"		"TRAITORS"
+	}
+
+	"Detectives"
+	{
+		"en"		"DETECTIVES"
+	}
+
+	"Innocents"
+	{
+		"en"		"INNOCENTS"
+	}
+
+	"Inspected body. The extracted data are the following"
+	{
+		"en"		"Inspected body. The extracted data were the following:"
+	}
+
+	"Victim name"
+	{
+		"#format"	"{1:s}"
+		"en"		"Victim name: {1}"
+	}
+
+	"Team victim"
+	{
+		"#format"	"{1:s}"
+		"en"		"Team: {1}"
+	}
+
+	"Elapsed since his death"
+	{
+		"#format"	"{1:i}"
+		"en"		"Elapsed since his death: {1} seconds"
+	}
+
+	"The weapon used has been"
+	{
+		"#format"	"{1:s}"
+		"en"		"The weapon used has been: {1}"
+	}
+
+	"The weapon used has been: himself (suicide)"
+	{
+		"en"		"The weapon used has been: himself (suicide)"
+	}
+
+	"Killer is Player"
+	{
+		"#format"	"{1:s}"
+		"en"		"Killer is Player: {1}"
+	}
+
+	"Player committed suicide"
+	{
+		"en"		"Player committed suicide"
+	}
+
+	"Player Is an Innocent"
+	{
+		"#format"	"{1:N}"
+		"en"		"Player{green} {1} {lightgreen}is {green}INNOCENT"
+	}
+
+	"T channel"
+	{
+		"#format"	"{1:N},{2:s}"
+		"en"		"{darkred}*TRAITORS* {1}:{green} {2}"
+	}
+
+	"D channel"
+	{
+		"#format"	"{1:N},{2:s}"
+		"en"		"{blue}*DETECTIVES* {1}:{green} {2}"
+	}
+
+	"You dont have it!"
+	{
+		"en"		"You dont have it!"
+	}
+
+	"TTT Shop"
+	{
+		"#format"	"{1:d}"
+		"en"		"TTT Shop\nYour Credits: {1}"
+	}
+
+	"credits earned"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"		"You won {1} credits\nYour current credits are: {2}"
+	}
+
+	"lost credits"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"		"You lose {1} credits\nYour current credits are: {2}"
+	}
+
+	"karma earned"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"		"You earn {1} karma\nYour karma is now: {2}"
+	}
+
+	"lost karma"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"		"You lose {1} karma\nYour karma is now: {2}"
+	}
+
+	"no logs yet"
+	{
+		"en"		"No logs yet"
+	}
+
+	"See your console"
+	{
+		"en"		"Logs Received! Check your console to see the logs"
+	}
+
+	"you cant see logs"
+	{
+		"en"		"You can´t see the logs now, you need be dead or round has to be inactive"
+	}
+	
+	"watching logs alive"
+	{
+		"#format"	"{1:N}"
+		"en"		"{green}{1} {default}is {darkred}alive {default}and watching logs of current round."
+	}
+
+	"Receiving logs"
+	{
+		"en"		"Receiving logs... wait a moment"
+	}
+
+	"Taser"
+	{
+		"#format"	"{1:d}"
+		"en"		"Buy Taser (team detector) - {1}"
+	}
+
+	"USPS"
+	{
+		"#format"	"{1:d}"
+		"en"		"Buy USP-S - {1}"
+	}
+
+	"M4S"
+	{
+		"#format"	"{1:d}"
+		"en"		"Buy M4-S - {1}"
+	}
+
+	"Found Innocent"
+	{
+		"#format"	"{1:N},{2:s}"
+		"en"		"{orchid}{1} {lightgreen}has found the body of {green}{2}. {lightgreen}That was a {green}INNOCENT!"
+	}
+
+	"Found Detective"
+	{
+		"#format"	"{1:N},{2:s}"
+		"en"		"{orchid}{1} {lightgreen}has found the body of {blue}{2}. {lightgreen}That was a {blue}DETECTIVE!"
+	}
+
+	"Found Traitor"
+	{
+		"#format"	"{1:N},{2:s}"
+		"en"		"{orchid}{1} {lightgreen}has found the body of {darkred}{2}. {lightgreen}That was a {darkred}Traitor!"
+	}
+
+	"Buy c4"
+	{
+		"#format"	"{1:d}"
+		"en"		"Buy C4 - {1}"
+	}
+
+	"Buy jihadbomb"
+	{
+		"#format"	"{1:d}"
+		"en"		"Buy Jihad Bomb - {1}"
+	}
+
+	"Your bomb is not armed."
+	{
+		"en"		"Your bomb is not armed."
+	}
+
+	"Your bomb is now armed."
+	{
+		"en"		"Your bomb is now armed."
+	}
+
+	"bomb will arm in 60 seconds, double tab F to explode"
+	{
+		"en"		"bomb will arm in 60 seconds, double tab F to explode"
+	}
+
+	"Your Karma is too low"
+	{
+		"en"		"You were banned, because your karma is too low!"
+	}
+
+	"TRAITORS HAS BEEN SELECTED"
+	{
+		"#format"	"{1:d}"
+		"en"		"{darkred}{1} TRAITORS {lightgreen}HAVE BEEN SELECTED"
+	}
+
+	"Buy radar"
+	{
+		"#format"	"{1:d}"
+		"en"		"Buy radar - {1}"
+	}
+
+	"Suicide Blocked"
+	{
+		"en"		"Suicide blocked"
+	}
+
+	"Right click to plant the C4"
+	{
+		"en"		"Right click to plant the C4!"
+	}
+
+	"You already have an active Health Station"
+	{
+		"en"		"You already have an active Health Station!"
+	}
+
+	"The player who RDM'd you is no longer available"
+	{
+		"en"		"The player who RDM'd you is no longer available!"
+	}
+
+	"You were RDM'd"
+	{
+		"#format"	"{1:s}"
+		"en"		"You were RDM'd by {1}!"
+	}
+
+	"Forgive"
+	{
+		"en"		"Forgive"
+	}
+
+	"Punish"
+	{
+		"en"		"Punish"
+	}
+
+	"Choose Punish"
+	{
+		"#format"	"{1:N},{2:N}"
+		"en"		"{1} has chosen to punish {2} for RDMing them!"
+	}
+
+	"Choose Forgive Victim"
+	{
+		"#format"	"{1:N}"
+		"en"		"You have chosen to forgive {1} for RDMing you!"
+	}
+
+	"Choose Forgive Attacker"
+	{
+		"#format"	"{1:N}"
+		"en"		"{1} has chosen to forgive you for RDMing them!"
+	}
+
+	"Player is Now Innocent"
+	{
+		"#format"	"{1:N}"
+		"en"		"{orchid}{1} {lightgreen}is now {green}Innocent!"
+	}
+
+	"Player is Now Traitor"
+	{
+		"#format"	"{1:N}"
+		"en"		"{orchid}{1} {lightgreen}is now {darkred}Traitor!"
+	}
+
+	"Player is Now Detective"
+	{
+		"#format"	"{1:N}"
+		"en"		"{orchid}{1} {lightgreen}is now {blue}Detective!"
+	}
+
+	"You Are Unassigned"
+	{
+		"en"		"You role has not been assigned yet!"
+	}
+
+	"You Are Now Innocent"
+	{
+		"en"		"You are an {green}Innocent!"
+	}
+
+	"You Are Now Traitor"
+	{
+		"en"		"You are a {darkred}Traitor!"
+	}
+
+	"You Are Now Detective"
+	{
+		"en"		"You are a {blue}Detective!"
+	}
+
+	"Triggered Falling Building"
+	{
+		"#format"	"{1:N}"
+		"en"		"{1} triggered the falling building as a Non-Traitor."
+	}
+
+	"Bomb Detonated"
+	{
+		"en"		"Your bomb has been detonated!"
+	}
+
+	"Set C4 Timer"
+	{
+		"en"		"Set the C4 Timer..."
+	}
+
+	"Seconds"
+	{
+		"#format"	"{1:d}"
+		"en"		"{1} seconds"
+	}
+
+	"Defuse C4"
+	{
+		"en"		"Defuse the C4!"
+	}
+
+	"C4 Wire"
+	{
+		"#format"	"{1:d}"
+		"en"		"Wire {1}"
+	}
+
+	"You Defused Bomb"
+	{
+		"#format"	"{1:N}"
+		"en"		"You have defused {orchid}{1}{lightgreen}'s bomb!"
+	}
+
+	"Has Defused Bomb"
+	{
+		"#format"	"{1:N}"
+		"en"		"{orchid}{1} {lightgreen}has defused your bomb!"
+	}
+
+	"Failed Defuse"
+	{
+		"en"		"Failed to defuse!"
+	}
+
+	"Alive to Plant"
+	{
+		"en"		"You must be alive to plant a bomb!"
+	}
+
+	"Will Explode In"
+	{
+		"#format"	"{1:.2f}"
+		"en"		"Deploying a c4 that will explode in {orchid}{1} {lightgreen}seconds."
+	}
+
+	"Bomb Was Not Found"
+	{
+		"en"		"Your bomb was not found!"
+	}
+
+	"Wire Is"
+	{
+		"#format"	"{1:d}"
+		"en"		"The defuse wire is {orchid}{1} {lightgreen}!"
+	}
+
+	"Your Traitor Partners"
+	{
+		"en"		"Your Traitor partners are:"
+	}
+
+	"No Traitor Partners"
+	{
+		"en"		"You have no partners."
+	}
+
+	"Kick Bad Name"
+	{
+		"#format"	"{1:s}"
+		"en"		"Remove the word {1} form your name!"
+	}
+
+	"Health Station Deployed"
+	{
+		"en"		"Health Station deployed. Stand near it to gain HP!"
+	}
+
+	"Healing From"
+	{
+		"#format"	"{1:N}"
+		"en"		"Healing from {orchid}{1} {lightgreen}'s Health Station!"
+	}
+
+	"Health Station Out Of Charges"
+	{
+		"en"		"This Health Station is out of charges! Wait for it to recharge!"
+	}
+
+	"Traitor List"
+	{
+		"#format"	"{1:N}"
+		"en"		"{darkred} {1}"
+	}
+
+	"Welcome Menu"
+	{
+		"#format"	"{1:N},{2:s}"
+		"en"		"Hello {1},\nthis is a Trouble in Terrorist Town Server\nwritten by {2}\n\nAre you familiar with the rules?"
+	}
+
+	"WM Yes"
+	{
+		"en"		"Yes, I'm familiar with the rules!"
+	}
+
+	"WM Kick Message"
+	{
+		"en"		"You are inactive or close rules menu!"
+	}
+
+	"AM Question"
+	{
+		"en"		"You want to play as detective?\nThen you need the following stuff:\n\n-working microphone\n-talk to other players\n-active Playing\n\nYou can confirm this?"
+	}
+
+	"AM Yes"
+	{
+		"en"		"Yes, I confirm this."
+	}
+
+	"AM No"
+	{
+		"en"		"No, I can't confirm this."
+	}
+
+	"WM No"
+	{
+		"en"		"No, show me the rules!"
+	}
+
+	"StartTimer"
+	{
+		"#format"	"{1:d}"
+		"en"		"<font size='32' color='00ff00'>Round starts in {1} seconds</font>"
+	}
+
+	"next round in"
+	{
+		"#format"	"{1:.0f}"
+		"en"		"Next round will start in {1} seconds!"
+	}
+
+	"Hurt Station Deployed"
+	{
+		"en"		"Hurt station has been deployed! It will damage any near-by players!"
+	}
+
+	"You reached limit"
+	{
+		"#format"	"{1:i}"
+		"en"		"You can only buy {1} of these per round!"
+	}
+
+	"All karma has been updated"
+	{
+		"en"		"KARMA HAS BEEN UPDATED!"
+	}
+
+	"ID: Need to be Alive"
+	{
+		"en"		"You need to be alive to use this command."
+	}
+
+	"ID: Need to buy ID"
+	{
+		"en"		"You dont have a ID. Buy one in the Shop."
+	}
+
+	"ID: Shows ID"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} is Innocent"
+	}
+
+	"Found Fake"
+	{
+		"#format"	"{1:N}"
+		"en"		"{orchid}{1} {lightgreen}has found a fake body!"
+	}
+
+	"Welcome Message 1"
+	{
+		"en"		"[{green}Lasermines{default}] {lightgreen}Type {green}!lm {lightgreen}in chat to plant the laser mines"
+	}
+
+	"Welcome Message 2"
+	{
+		"en"		"[{green}Lasermines{default}] {lightgreen}Type {green}!lm {lightgreen}in chat to plant or {green}!bm {lightgreen}to buy the laser mines"
+	}
+
+	"Can't plant, while dead"
+	{
+		"en"		"You can not plant the laser mine while you are dead"
+	}
+
+	"Can't use, while spec"
+	{
+		"en"		"You must be on a team to use laser mines"
+	}
+
+	"Infinity mines"
+	{
+		"en"		"You have infinity amount of laser mines"
+	}
+
+	"Mines"
+	{
+		"#format"	"{1:d}"
+		"en"		"Laser mines: {1}"
+	}
+
+	"Out of buy zone"
+	{
+		"en"		"You are out of buy zone"
+	}
+
+	"Can't buy, max amount"
+	{
+		"en"		"You have got max amount of laser mines"
+	}
+
+	"Can't buy, not enough money"
+	{
+		"#format"	"{1:d}"
+		"en"		"{1} mines. You have not enough money to buy more"
+	}
+
+	"Can't buy, while dead"
+	{
+		"en"		"You can not buy laser mines while you are dead"
+	}
+
+	"TaserMax"
+	{
+		"#format"	"{1:d}"
+		"en"		"You've reached the limit for tasers! (Usage(s) per round: {1})"
+	}
+
+	"AdminSet"
+	{
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"		"You give {orchid}{1} {green}{2} {lightgreen} {3}!"
+	}
+
+	"ID: Buy Message"
+	{
+		"en"		"Type !id to show your innocence."
+	}
+
+	"RoundStartCenter"
+	{
+		"#format"	"{1:d},{2:s},{3:d}"
+		"en"		"<font size='{1}' color='#{2}'>Round starts in {3} seconds</font>"
+	}
+
+	"RoundStartedCenter"
+	{
+		"#format"	"{1:d},{2:s}"
+		"en"		"<font size='{1}' color='#{2}'><bold>GO GO GO !!!</bold></font>"
+	}
+
+	"YouAreDead"
+	{
+		"en"		"You can't use this as dead player"
+	}
+
+	"Bought All"
+	{
+		"#format"	"{1:s},{2:d}"
+		"en"		"You've reached the limit of {1}'s {orchid}({2})"
+	}
+
+	"DT: Invalid Position"
+	{
+		"en"		"Decoy Position was incorrect. (Stuck problem)"
+	}
+
+	"SpecMenu: Title"
+	{
+		"en"		"Spec Menu"
+	}
+
+	"SpecMenu: Player"
+	{
+		"#format"	"{1:N}"
+		"en"		"Player: {1}"
+	}
+
+	"SpecMenu: Next"
+	{
+		"en"		"Next player"
+	}
+
+	"SpecMenu: Prev"
+	{
+		"en"		"Prev player"
+	}
+
+	"SpecMenu: Mute"
+	{
+		"en"		"Mute this player"
+	}
+
+	"Hud Name"
+	{
+		"en"		"Name"
+	}
+
+	"Hud Health"
+	{
+		"en"		"Health"
+	}
+
+	"Hud PlayerHealth"
+	{
+		"#format"	"{1:d}"
+		"en"		"{1}"
+	}
+
+	"Hud Karma"
+	{
+		"en"		"Karma"
+	}
+
+	"Hud PlayerKarma"
+	{
+		"#format"	"{1:d}"
+		"en"		"{1}"
+	}
+
+	"Hud PlayerName T-T"
+	{
+		"#format"	"{1:N}"
+		"en"		"<font color='#ff0000'>\"{1}\"</font>"
+	}
+
+	"Hud PlayerName T-D"
+	{
+		"#format"	"{1:N}"
+		"en"		"<font color='#0000ff'>\"{1}\"</font>"
+	}
+
+	"Hud PlayerName T-I"
+	{
+		"#format"	"{1:N}"
+		"en"		"<font color='#008000'>\"{1}\"</font>"
+	}
+
+	"Hud PlayerName D-T"
+	{
+		"#format"	"{1:N}"
+		"en"		"\"{1}\""
+	}
+
+	"Hud PlayerName D-D"
+	{
+		"#format"	"{1:N}"
+		"en"		"<font color='#0000ff'>\"{1}\"</font>"
+	}
+
+	"Hud PlayerName D-I"
+	{
+		"#format"	"{1:N}"
+		"en"		"\"{1}\""
+	}
+
+	"Hud PlayerName I-T"
+	{
+		"#format"	"{1:N}"
+		"en"		"\"{1}\""
+	}
+
+	"Hud PlayerName I-D"
+	{
+		"#format"	"{1:N}"
+		"en"		"<font color='#0000ff'>\"{1}\"</font>"
+	}
+
+	"Hud PlayerName I-I"
+	{
+		"#format"	"{1:N}"
+		"en"		"\"{1}\""
+	}
+
+	"You tased a Traitor"
+	{
+		"#format"	"{1:N},{2:N}"
+		"en"		"Player {lightgreen}{1} used a detector on Player {darkred}{2} {lightgreen}and he is a {darkred}TRAITOR!"
+	}
+
+	"You tased a Detective"
+	{
+		"#format"	"{1:N},{2:N}"
+		"en"		"Player {lightgreen}{1} used a detector on Player{blue} {2} {lightgreen}and he is a {blue}DETECTIVE!"
+	}
+
+	"You tased an Innocent"
+	{
+		"#format"	"{1:N},{2:N}"
+		"en"		"Player {lightgreen}{1} used a detector on Player{green} {2} {lightgreen}and he is {green}INNOCENT!"
+	}
+
+	"AlreadyTaser"
+	{
+		"#format"	"{1:d}"
+		"en"		"You've already a taser in your inventory!"
+	}
+
+	"is now talking in Traitor Voice Chat"
+	{
+		"#format"	"{1:N}"
+		"en"		"{1} is now talking in Traitor Voice Chat"
+	}
+
+	"stopped talking in Traitor Voice Chat"
+	{
+		"#format"	"{1:N}"
+		"en"		"{1} stopped talking in Traitor Voice Chat"
+	}
+
+	"Traitor Voice Chat: Disabled!"
+	{
+		"en"		"Traitor Voice Chat: Disabled!"
+	}
+
+	"Traitor Voice Chat: Enabled!"
+	{
+		"en"		"Traitor Voice Chat: Enabled!"
+	}
+
+	"Hud PlayerName T-U"
+	{
+		"#format"	"{1:N}"
+		"en"		"\"{1}\""
+	}
+
+	"Hud PlayerName D-U"
+	{
+		"#format"	"{1:N}"
+		"en"		"\"{1}\""
+	}
+
+	"Hud PlayerName U-T"
+	{
+		"#format"	"{1:N}"
+		"en"		"\"{1}\""
+	}
+
+	"Hud PlayerName U-D"
+	{
+		"#format"	"{1:N}"
+		"en"		"<font color='#0000ff'>\"{1}\"</font>"
+	}
+
+	"Hud PlayerName U-I"
+	{
+		"#format"	"{1:N}"
+		"en"		"\"{1}\""
+	}
+
+	"Hud PlayerName U-U"
+	{
+		"#format"	"{1:N}"
+		"en"		"\"{1}\""
+	}
+
+	"Hud PlayerName I-U"
+	{
+		"#format"	"{1:N}"
+		"en"		"\"{1}\""
+	}
+
+	"ID: Cooldown"
+	{
+		"en"		"You need to wait, before you can use that command again."
+	}
+
+	"Item bought!"
+	{
+		"#format"	"{1:i},{2:s}"
+		"en"		"Item {2} bought! Your CREDITS are {1}"
+	}
+
+	"SpecMenu: Unmute Dead"
+	{
+		"en"		"Unmute dead players"
+	}
+
+	"SpecMenu: Mute Dead"
+	{
+		"en"		"Mute dead players"
+	}
+
+	"SpecMenu: Unmute Alive"
+	{
+		"en"		"Unmute alive players"
+	}
+
+	"SpecMenu: Mute Alive"
+	{
+		"en"		"Mute alive players"
+	}
+
+	"Reopen Shop deactivated"
+	{
+		"en"		"Shop will no longer open after buy a item."
+	}
+
+	"Reopen Shop activated"
+	{
+		"en"		"Shop will open again after buy a item."
+	}
+
+	"You already have an active Station"
+	{
+		"en"		"You already have an active Station!"
+	}
+}

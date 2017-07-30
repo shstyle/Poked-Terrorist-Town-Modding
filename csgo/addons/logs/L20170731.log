@@ -1,0 +1,42 @@
+L 07/31/2017 - 00:00:23: SourceMod log file session started (file "L20170731.log") (Version "1.8.0.6016")
+L 07/31/2017 - 00:00:23: -------- Mapchange to de_dust2 --------
+L 07/31/2017 - 00:00:52: -------- Mapchange to de_dust2 --------
+L 07/31/2017 - 00:07:31: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/31/2017 - 00:09:23: [ttt\ttt.smx] "Ebichu<2><STEAM_1:1:224494094><>" set the role of "Ebichu<2><STEAM_1:1:224494094><>" to "Traitor"
+L 07/31/2017 - 00:11:36: [SM] Changed map to "de_train"
+L 07/31/2017 - 00:11:38: -------- Mapchange to de_train --------
+L 07/31/2017 - 00:12:07: SourceMod log file session started (file "L20170731.log") (Version "1.8.0.6016")
+L 07/31/2017 - 00:12:07: -------- Mapchange to de_dust2 --------
+L 07/31/2017 - 00:13:55: SourceMod log file session started (file "L20170731.log") (Version "1.8.0.6016")
+L 07/31/2017 - 00:13:55: -------- Mapchange to de_dust2 --------
+L 07/31/2017 - 00:14:05: -------- Mapchange to de_dust2 --------
+L 07/31/2017 - 00:14:31: -------- Mapchange to de_dust2 --------
+L 07/31/2017 - 00:17:09: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Detective"
+L 07/31/2017 - 00:19:38: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Traitor"
+L 07/31/2017 - 00:23:42: [funcommands.smx] "Ebichu<3><STEAM_1:1:224494094><>" froze "Ebichu<3><STEAM_1:1:224494094><>"
+L 07/31/2017 - 00:23:57: [funcommands.smx] "Ebichu<3><STEAM_1:1:224494094><>" set a FireBomb on "Ebichu<3><STEAM_1:1:224494094><>"
+L 07/31/2017 - 00:24:34: [funcommands.smx] "Ebichu<3><STEAM_1:1:224494094><>" set blind on "Ebichu<3><STEAM_1:1:224494094><>", amount 240.
+L 07/31/2017 - 00:24:44: [funcommands.smx] "Ebichu<3><STEAM_1:1:224494094><>" set blind on "Ebichu<3><STEAM_1:1:224494094><>", amount 255.
+L 07/31/2017 - 00:24:48: [funcommands.smx] "Ebichu<3><STEAM_1:1:224494094><>" set blind on "Ebichu<3><STEAM_1:1:224494094><>", amount 0.
+L 07/31/2017 - 00:25:05: [playercommands.smx] "Ebichu<3><STEAM_1:1:224494094><>" renamed "Ebichu<3><STEAM_1:1:224494094><>" to "EEihcu")
+L 07/31/2017 - 00:25:06: [playercommands.smx] "EEihcu<3><STEAM_1:1:224494094><>" renamed "EEihcu<3><STEAM_1:1:224494094><>" to "EEuuci")
+L 07/31/2017 - 00:25:07: [playercommands.smx] "EEuuci<3><STEAM_1:1:224494094><>" renamed "EEuuci<3><STEAM_1:1:224494094><>" to "ccEuiu")
+L 07/31/2017 - 00:25:08: [playercommands.smx] "ccEuiu<3><STEAM_1:1:224494094><>" renamed "ccEuiu<3><STEAM_1:1:224494094><>" to "ucuuEc")
+L 07/31/2017 - 00:25:08: [playercommands.smx] "ucuuEc<3><STEAM_1:1:224494094><>" renamed "ucuuEc<3><STEAM_1:1:224494094><>" to "cuuuuu")
+L 07/31/2017 - 00:25:08: [playercommands.smx] "cuuuuu<3><STEAM_1:1:224494094><>" renamed "cuuuuu<3><STEAM_1:1:224494094><>" to "uuuuuu")
+L 07/31/2017 - 00:25:08: [playercommands.smx] "uuuuuu<3><STEAM_1:1:224494094><>" renamed "uuuuuu<3><STEAM_1:1:224494094><>" to "uuuuuu")
+L 07/31/2017 - 00:25:09: [playercommands.smx] "uuuuuu<3><STEAM_1:1:224494094><>" renamed "uuuuuu<3><STEAM_1:1:224494094><>" to "uuuuuu")
+L 07/31/2017 - 00:25:09: [playercommands.smx] "uuuuuu<3><STEAM_1:1:224494094><>" renamed "uuuuuu<3><STEAM_1:1:224494094><>" to "uuuuuu")
+L 07/31/2017 - 00:25:09: [playercommands.smx] "uuuuuu<3><STEAM_1:1:224494094><>" renamed "uuuuuu<3><STEAM_1:1:224494094><>" to "uuuuuu")
+L 07/31/2017 - 00:25:09: [playercommands.smx] "uuuuuu<3><STEAM_1:1:224494094><>" renamed "uuuuuu<3><STEAM_1:1:224494094><>" to "uuuuuu")
+L 07/31/2017 - 00:25:21: [funcommands.smx] "uuuuuu<3><STEAM_1:1:224494094><>" drugged "uuuuuu<3><STEAM_1:1:224494094><>"
+L 07/31/2017 - 00:25:27: [funcommands.smx] "uuuuuu<3><STEAM_1:1:224494094><>" undrugged "uuuuuu<3><STEAM_1:1:224494094><>"
+L 07/31/2017 - 00:25:38: [funcommands.smx] "uuuuuu<3><STEAM_1:1:224494094><>" set a FreezeBomb on "uuuuuu<3><STEAM_1:1:224494094><>"
+L 07/31/2017 - 00:31:38: SourceMod log file session started (file "L20170731.log") (Version "1.8.0.6016")
+L 07/31/2017 - 00:31:38: -------- Mapchange to de_dust2 --------
+L 07/31/2017 - 00:31:44: -------- Mapchange to de_dust2 --------
+L 07/31/2017 - 00:32:07: -------- Mapchange to de_dust2 --------
+L 07/31/2017 - 00:34:19: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Detective"
+L 07/31/2017 - 00:34:25: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Traitor"
+L 07/31/2017 - 00:35:49: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Traitor"
+L 07/31/2017 - 00:35:57: [ttt\ttt.smx] "Ebichu<3><STEAM_1:1:224494094><>" set the role of "Ebichu<3><STEAM_1:1:224494094><>" to "Traitor"
