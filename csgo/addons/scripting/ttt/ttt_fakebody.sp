@@ -105,7 +105,7 @@ public Action TTT_OnItemPurchased(int client, const char[] itemshort, bool count
 		{
 			if (g_iPCount[client] >= g_iCount)
 			{
-				CPrintToChat(client, g_sPluginTag, "Bought All", client, g_sLongName, g_iCount);
+				CPrintToChat(client, g_sPluginTag, "Bought All", client, g_sLongName, g_iCount);		
 				return Plugin_Stop;
 			}
 			
@@ -166,7 +166,7 @@ stock bool SpawnFakeBody(int client)
 	iRagdollC[Found] = false;
 	
 	TTT_SetRagdoll(iRagdollC[0]);
-	
+	PrintToChat(client, "가짜 시체를 만들었습니다. 이 시체가 발견되면 모두가 당신이 죽은줄로만 압니다.");
 	return true;
 }
 
