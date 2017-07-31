@@ -303,7 +303,7 @@ public Action TTT_OnItemPurchased(int client, const char[] itemshort, bool count
 			{
 				SDKHooks_DropWeapon(client, GetPlayerWeaponSlot(client, CS_SLOT_SECONDARY));
 			}
-	
+			PrintToChat(client, " [TIP] USP-S 소음기는 상대방을 조용히 죽이는데 효과적입니다..");
 			GivePlayerItem(client, "weapon_usp_silencer");
 		}
 		else if(strcmp(itemshort, AK_ITEM_SHORT, false) == 0)
@@ -316,7 +316,6 @@ public Action TTT_OnItemPurchased(int client, const char[] itemshort, bool count
 			{
 				SDKHooks_DropWeapon(client, GetPlayerWeaponSlot(client, CS_SLOT_PRIMARY));
 			}
-
 			GivePlayerItem(client, "weapon_ak47");
 		}
 		else if(strcmp(itemshort, DEAGLE_ITEM_SHORT, false) == 0)
@@ -368,7 +367,8 @@ public Action TTT_OnItemPurchased(int client, const char[] itemshort, bool count
 			{
 				SDKHooks_DropWeapon(client, GetPlayerWeaponSlot(client, CS_SLOT_PRIMARY));
 			}
-
+			PrintToChat(client, " [TIP] 소음기 무기를 들고있을때 의심받을 수 있으니");
+			PrintToChat(client, "       필요한경우 아이템을 획득했음을 알리는것도 좋습니다.");
 			GivePlayerItem(client, "weapon_m4a1_silencer");
 		}
 		if(strcmp(itemshort, AWP_ITEM_SHORT, false) == 0)
