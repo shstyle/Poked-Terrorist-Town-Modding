@@ -289,8 +289,10 @@ public Action OnTraceAttack(int iVictim, int &iAttacker, int &inflictor, float &
 		{
 			TTT_LogString("-> [%N (Traitor) was tased by %N] - TRAITOR DETECTED", iVictim, iAttacker, iVictim);
 			if(iARole == TTT_TEAM_DETECTIVE)
-			SetEntityRenderColor(iVictim, 255,  0, 0, 255);
-			
+			{
+				SetEntityRenderColor(iVictim, 255,  0, 0, 255);
+				CPrintToChat(iVictim, "[증명됨] 당신은 트레이터로 판별되었습니다. 다른 사람들은 당신이 트레이터임을 알아볼 수 있습니다. 빨리 도망치십시오.");
+			}
 			if (g_bBroadcastTaserResult)
 			{
 				CPrintToChatAll(g_sPluginTag, "You tased a Traitor", "ko", iAttacker, iVictim);
@@ -304,22 +306,17 @@ public Action OnTraceAttack(int iVictim, int &iAttacker, int &inflictor, float &
 		}
 		else if (iRole == TTT_TEAM_DETECTIVE)
 		{
-			TTT_LogString("-> [%N (Detective) was tased by %N]", iVictim, iAttacker, iVictim);
 			
-			if (g_bBroadcastTaserResult)
-			{
-				CPrintToChatAll(g_sPluginTag, "You tased a Detective", "ko", iAttacker , iVictim);
-			}
-			else
-			{
-				CPrintToChat(iAttacker,  g_sPluginTag, "You hurt a Detective", iVictim, iVictim);
-			}
 		}
 		else if (iRole == TTT_TEAM_INNOCENT)
 		{
 			if(iARole == TTT_TEAM_DETECTIVE)
-			SetEntityRenderColor(iVictim, 0 , 255, 0, 255);
-			
+			{
+				
+				SetEntityRenderColor(iVictim, 0 , 255, 0, 255);
+				CPrintToChat(iVictim, "[증명됨] 당신은 이노센트임이 증명되었습니다.");
+				
+			}
 			TTT_LogString("-> [%N (Innocent) was tased by %N]", iVictim, iAttacker, iVictim);
 			
 			if (g_bBroadcastTaserResult)
