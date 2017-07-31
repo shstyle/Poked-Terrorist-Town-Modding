@@ -218,7 +218,11 @@ public Action OnSetTransmit_GlowSkin(int iSkin, int client)
 		
 			continue;
 		}
-		
+		///TODO 옵저버 플레이어는 이 기능을 사용합니다.
+		if( (TTT_GetClientRole(client) == TTT_TEAM_UNASSIGNED) && !IsPlayerAlive(client))
+		{
+			return Plugin_Continue;
+		}	
 		
 		if ( (TTT_GetClientRole(client) == TTT_TEAM_DETECTIVE && TTT_GetClientRole(client) == TTT_GetClientRole(target)) || g_cheatWorks[client])
 		{

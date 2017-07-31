@@ -197,6 +197,8 @@ public void OnAllPluginsLoaded()
 	{
 		TTT_RegisterCustomItem(KEV_T_ITEM_SHORT, g_cKev_Long, g_iKev_Price, TTT_TEAM_TRAITOR, g_iKev_Prio);
 		TTT_RegisterCustomItem(KEV_D_ITEM_SHORT, g_cKev_Long, g_iKev_Price, TTT_TEAM_DETECTIVE, g_iKev_Prio);
+		
+		
 	}
 	else if(g_iKev_Type == 2)
 	{

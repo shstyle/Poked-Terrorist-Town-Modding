@@ -23,7 +23,7 @@ int g_iDPrice = 0;
 int g_iIPrice = 0;
 int g_iTPrice = 0;
 
-int g_iDPrio = 0;
+int g_iDPrio = 0; 
 int g_iIPrio = 0;
 int g_iTPrio = 0;
 

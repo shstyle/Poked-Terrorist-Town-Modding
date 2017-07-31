@@ -390,7 +390,8 @@ bool ClientBuyItem(int client, char[] item)
 			int count = true;
 			
 			Action result = Plugin_Continue;
-			Call_StartForward(g_hOnItemPurchase);
+			Call_StartForward(g_hOnItemsub
+			);
 			Call_PushCell(client);
 			Call_PushCell(price);
 			Call_PushCell(count);

@@ -11,7 +11,7 @@
 
 #pragma newdecls required
 #define SHORT_NAME "ClearStatus"
-#define LONG_NAME "ClearStatus"
+#define LONG_NAME "신분세탁"
 #define PLUGIN_NAME TTT_PLUGIN_NAME ... " - Items: ClearStatus"
 
 int Price = 0;
