@@ -162,7 +162,7 @@ public void OnPluginStart()
 	g_iTraitorloseDeadNonTraitors = Config_LoadInt("ttt_credits_roundend_traitorlose_dead_nontraitors", 1200, "The amount of credits an innocent or detective will recieve for winning the round if they died.");
 	g_iTraitorwinAliveTraitors = Config_LoadInt("ttt_credits_roundend_traitorwin_alive_traitors", 4800, "The amount of credits a traitor will recieve for winning the round if they survived.");
 	g_iTraitorwinDeadTraitors = Config_LoadInt("ttt_credits_roundend_traitorwin_dead_traitors", 1200, "The amount of credits a traitor will recieve for winning the round if they died.");
-	g_iCreditsFoundBody = Config_LoadInt("ttt_credits_found_body_add", 1200, "The amount of credits an innocent or detective will recieve for discovering a new dead body.");
+	g_iCreditsFoundBody = Config_LoadInt("ttt_credits_found_body_add", 1, "The amount of credits an innocent or detective will recieve for discovering a new dead body.");
 
 	g_bShowEarnCreditsMessage = Config_LoadBool("ttt_show_message_earn_credits", true, "Display a message showing how many credits you earned. 1 = Enabled, 0 = Disabled");
 	g_bShowLoseCreditsMessage = Config_LoadBool("ttt_show_message_lose_credits", true, "Display a message showing how many credits you lost. 1 = Enabled, 0 = Disabled");

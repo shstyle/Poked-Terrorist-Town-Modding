@@ -167,8 +167,7 @@ public Action TTT_OnItemPurchased(int client, const char[] itemshort, bool count
 			if (role == TTT_TEAM_DETECTIVE || role == TTT_TEAM_UNASSIGNED || g_bHasID[client])
 			{
 				return Plugin_Stop;
-			}
-			
+			}i
 			CPrintToChat(client, g_sPluginTag, "ID: Buy Message", client);
 			
 			g_bHasID[client] = true;

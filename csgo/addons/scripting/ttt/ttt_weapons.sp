@@ -303,7 +303,7 @@ public Action TTT_OnItemPurchased(int client, const char[] itemshort, bool count
 			{
 				SDKHooks_DropWeapon(client, GetPlayerWeaponSlot(client, CS_SLOT_SECONDARY));
 			}
-
+	
 			GivePlayerItem(client, "weapon_usp_silencer");
 		}
 		else if(strcmp(itemshort, AK_ITEM_SHORT, false) == 0)
