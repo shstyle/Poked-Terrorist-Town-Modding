@@ -19,6 +19,13 @@
 #include "core/natives.sp"
 #include "core/sql.sp"
 
+
+int g_WinStrick[MAXPLAYERS + 1] =  { 0, ... };//윈 스트릭
+int g_WinRate[MAXPLAYERS + 1] =  { 0, ... }; //윈 레이팅
+int g_KillTarget[MAXPLAYERS + 1] =  { 0, ... }; //암살대상
+
+
+
 public Plugin myinfo = 
 {
 	name = PLUGIN_NAME, 
@@ -159,6 +166,8 @@ public void OnPluginStart()
 	}
 }
 
+
+
 public void OnAllPluginsLoaded()
 {
 	if (LibraryExists("sourcebans"))
@@ -189,6 +198,7 @@ public void TTT_OnSQLConnect(Database db)
 	
 	LateLoadClients(false);
 }
+
 
 void SetupConfig()
 {
@@ -1318,8 +1328,8 @@ void LateLoadClients(bool bHook = false)
 {
 	LoopValidClients(i)
 	{
-		//LoadClientKarma(GetClientUserId(i));
-		
+		LoadClientKarma(GetClientUserId(i));
+		LoadClientRating(GetClientUserId(i));
 		if (bHook)
 		{
 			HookClient(i);
@@ -1582,7 +1592,6 @@ public void OnClientPostAdminCheck(int client)
 	
 	g_bImmuneRDMManager[client] = false;
 	g_bFound[client] = true;
-	
 	g_iRole[client] = TTT_TEAM_UNASSIGNED;
 	CS_SetClientClanTag(client, "UNASSIGNED");
 	
@@ -1590,6 +1599,8 @@ public void OnClientPostAdminCheck(int client)
 	{
 		CreateTimer(1.0, Timer_OnClientPostAdminCheck, GetClientUserId(client));
 	}
+	
+	
 	
 	if (g_iConfig[b_showRulesMenu])
 	{
@@ -1607,7 +1618,8 @@ public Action Timer_OnClientPostAdminCheck(Handle timer, any userid)
 	
 	if (TTT_IsClientValid(client))
 	{
-		//LoadClientKarma(GetClientUserId(client));
+		LoadClientKarma(GetClientUserId(client));
+		LoadClientRating(GetClientUserId(client));
 	}
 }
 
@@ -2711,6 +2723,186 @@ stock void subtractKarma(int client, int karma, bool message = false)
 	UpdateKarma(client, g_iKarma[client]);
 }
 
+
+/*  SH Add ServerFunction TODO  */
+
+public void TTT_OnRoundEnd(int winner)
+{
+	LoopValidClients(clients)
+	{
+		if(TTT_IsClientValid(clients))
+		{
+			int role = TTT_GetClientRole(clients);
+			if( (role == winner && winner == TTT_TEAM_INNOCENT) ) PlayerWinRateUpdate(clients, false); //시민팀 승리시
+			else  PlayerWinRateUpdate(clients, true);
+  			
+  			if( (role == winner && winner == TTT_TEAM_TRAITOR) ) PlayerWinRateUpdate(clients, false);//트레이터 승리시
+			else PlayerWinRateUpdate(clients, true);
+		}
+	}
+
+}
+
+
+stock void LoadClientRating(int userid)
+{
+	int client = GetClientOfUserId(userid);
+	
+	if (TTT_IsClientValid(client))
+	{
+		char sCommunityID[64];
+		
+		if (!GetClientAuthId(client, AuthId_SteamID64, sCommunityID, sizeof(sCommunityID)))
+		{
+			LogToFileEx(g_iConfig[s_errFile], "(Rating) Auth failed: #%d", client);
+			return;
+		}
+		
+		char sQuery[2048];
+		Format(sQuery, sizeof(sQuery), "SELECT `rating` FROM `ttt` WHERE `communityid`= \"%s\";", sCommunityID);
+		
+		if (g_dDB != null)
+		{
+			g_dDB.Query(SQL_OnRatingLoaded, sQuery, userid);
+		}
+	}
+}
+
+public void SQL_OnRatingLoaded(Handle owner, Handle hndl, const char[] error, any userid)
+{
+	int client = GetClientOfUserId(userid);
+	
+	if (!client || !TTT_IsClientValid(client))
+		return;
+	
+	
+	if (hndl == null || strlen(error) > 0)
+	{
+		LogToFileEx(g_iConfig[s_errFile], "(SQL_OnRatingLoaded) Query failed: %s", error);
+		return;
+	}
+	else
+	{
+		if (!SQL_FetchRow(hndl))
+		{
+			InsertPlayer(userid);
+		}
+		else
+		{
+			char sCommunityID[64];
+			if (!GetClientAuthId(client, AuthId_SteamID64, sCommunityID, sizeof(sCommunityID)))
+			{
+				LogToFileEx(g_iConfig[s_errFile], "(SQL_OnRatingLoaded) Auth failed: #%d", client);
+				return;
+			}
+			
+			int rate = SQL_FetchInt(hndl, 0);
+			
+		
+			
+			if (rate == 0)
+			{
+				g_WinRate[client] = 1000;
+			}
+			else
+			{
+				g_WinRate[client] = rate;
+				PrintToChat(client, "현재 당신의 레이팅(랭킹) 입니다. : %d", g_WinRate[client]);
+			}
+		}
+	}
+}
+
+
+public void PlayerWinRateUpdate(int client, bool isLoser)
+{
+	int mAddRating = 0;
+	int mLoseRating = 0;
+	int mCurRating = g_WinRate[client];
+	int mRole = TTT_GetClientRole(client);
+	if (mCurRating <= 1000)
+	{
+		mAddRating = GetRandomInt(40, 50);
+		if (mRole == TTT_TEAM_TRAITOR)mAddRating += 10;
+		mLoseRating = GetRandomInt(5, 10);
+	}
+	
+	if (mCurRating > 1000 && mCurRating <= 1500 )
+	{
+		mAddRating = GetRandomInt(20, 35);
+		if (mRole == TTT_TEAM_TRAITOR)mAddRating += 8; //8점 고정가산점
+		mLoseRating = GetRandomInt(7, 15);
+	}
+	
+	if (mCurRating > 1500 && mCurRating <= 2000 )
+	{
+		mAddRating = GetRandomInt(15, 20);
+		if (mRole == TTT_TEAM_TRAITOR)mAddRating += 5;
+		mLoseRating = GetRandomInt(7, 15);
+	}
+	
+	if (mCurRating > 2000 && mCurRating <= 2500 )
+	{
+		mAddRating = GetRandomInt(7, 15);
+		if (mRole == TTT_TEAM_TRAITOR)mAddRating += 3;
+		mLoseRating = GetRandomInt(7, 15);
+	}
+	
+	if (mCurRating > 2500 && mCurRating <= 2800 )
+	{
+		mAddRating = GetRandomInt(4, 9);
+		if (mRole == TTT_TEAM_TRAITOR) mAddRating += 1;
+		mLoseRating = GetRandomInt(10, 15);
+	}
+	
+	if (mCurRating > 2800 && mCurRating <= 3400 )
+	{
+		mAddRating = GetRandomInt(2, 7);
+		if (mRole == TTT_TEAM_TRAITOR) mAddRating += 1;
+		mLoseRating = GetRandomInt(12, 20);
+	}
+	
+	if (mCurRating > 3400)
+	{
+		mAddRating = GetRandomInt(1, 2);
+		mLoseRating = GetRandomInt(4, 10);
+	}
+	
+	
+	char sCommunityID[64];
+	
+	if (!GetClientAuthId(client, AuthId_SteamID64, sCommunityID, sizeof(sCommunityID)))
+	{
+		return;
+	}
+	
+	
+	if(!isLoser)
+	{
+		g_WinRate[client] = g_WinRate[client] + mAddRating;
+		PrintToChat(client, "축하합니다! 승리해서 %d 만큼 레이팅이 증가 했습니다!  현재 레이팅 :%d ", mAddRating, g_WinRate[client]);
+	}
+	else
+	{
+   		g_WinRate[client] = g_WinRate[client] - mLoseRating;
+		PrintToChat(client, "아쉽군요! 패배해서 %d 만큼 레이팅이 감소되었습니다. 현재 레이팅 : %d ", mLoseRating, g_WinRate[client]);
+	}
+	
+	
+	char sQuery[2048];
+	Format(sQuery, sizeof(sQuery), "UPDATE `ttt` SET `rating`=%d WHERE `communityid`=\"%s\";", g_WinRate[client], sCommunityID);
+	
+	
+	if (g_dDB != null)
+	{
+		g_dDB.Query(Callback_UpdateRanking, sQuery, GetClientUserId(client));
+	}
+}
+
+/*end::*/
+
+
+
 stock void UpdateKarma(int client, int karma)
 {
 	char sCommunityID[64];
@@ -3343,6 +3535,8 @@ public void SQL_OnClientPostAdminCheck(Handle owner, Handle hndl, const char[] e
 		}
 	}
 }
+
+
 
 stock void InsertPlayer(int userid)
 {

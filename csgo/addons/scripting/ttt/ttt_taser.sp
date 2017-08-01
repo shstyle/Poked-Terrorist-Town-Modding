@@ -36,6 +36,9 @@ int g_iIPCount[MAXPLAYERS + 1] =  { 0, ... };
 int g_iTCount = 0;
 int g_iTPCount[MAXPLAYERS + 1] =  { 0, ... };
 
+
+
+
 bool g_bTaser[MAXPLAYERS + 1] =  { false, ... };
 
 int g_iDamage = 0;

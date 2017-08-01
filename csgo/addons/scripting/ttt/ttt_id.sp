@@ -62,6 +62,7 @@ public void OnPluginStart()
 	g_iTPrio = Config_LoadInt("id_traitor_sort_prio", 0, "The sorting priority of the fake ID in the shop menu.");
 	g_iIPrio = Config_LoadInt("id_innocent_sort_prio", 0, "The sorting priority of the ID in the shop menu.");
 	
+	
 	g_fCooldown = Config_LoadFloat("id_cooldown_time", 0.0, "The cooldown for the !id command. Set it to 0.0 to disable the cooldown");
 	
 	Config_Done();
@@ -82,6 +83,7 @@ public Action Command_ID(int client, int args)
 
 	if (g_fCooldown > 0.0)
 	{
+		
 		if (g_hTimer[client] != null)
 		{
 			CPrintToChat(client, g_sPluginTag, "ID: Cooldown", client);

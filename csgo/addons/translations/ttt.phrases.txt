@@ -178,17 +178,17 @@
 
 	"Traitors"
 	{
-		"en"		"TRAITORS"
+		"en"		"트레아터"
 	}
 
 	"Detectives"
 	{
-		"en"		"DETECTIVES"
+		"en"		"탐정"
 	}
 
 	"Innocents"
 	{
-		"en"		"INNOCENTS"
+		"en"		"이노센트"
 	}
 
 	"Inspected body. The extracted data are the following"
