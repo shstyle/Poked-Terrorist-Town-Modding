@@ -23,7 +23,7 @@
 int g_WinStrick[MAXPLAYERS + 1] =  { 0, ... };//윈 스트릭
 int g_WinRate[MAXPLAYERS + 1] =  { 0, ... }; //윈 레이팅
 int g_KillTarget[MAXPLAYERS + 1] =  { 0, ... }; //암살대상
-
+int g_Killer[MAXPLAYERS + 1] { 0, ... }; //킬러 
 
 
 public Plugin myinfo = 
@@ -130,6 +130,8 @@ public void OnPluginStart()
 	
 	RegConsoleCmd("sm_trules", Command_TRules);
 	RegConsoleCmd("sm_drules", Command_DetectiveRules);
+	RegConsoleCmd("sm_rules", Command_ShowRule);
+	RegConsoleCmd("sm_help", Command_ShowMotd);
 	
 	HookEvent("player_death", Event_PlayerDeathPre, EventHookMode_Pre);
 	HookEvent("round_prestart", Event_RoundStartPre, EventHookMode_Pre);
@@ -662,6 +664,31 @@ public void ThinkPost(int entity)
 	SetEntDataArray(entity, g_iAlive, isAlive, MAXPLAYERS+1);
 }
 
+public Action Command_ShowMotd(int client, int args)
+{
+	char sCommunityID[64];
+	if (!GetClientAuthId(client, AuthId_SteamID64, sCommunityID, sizeof(sCommunityID)))
+		return;
+	
+	C_PrintToChat(client, "http://121.140.182.219/bootstrap?cid=%s", sCommunityID);
+	
+	char sURL[512];
+	Format(sURL, sizeof(sURL), "http://cola-team.com/franug/webshortcuts2.php?web=height=720,width=1280;franug_is_pro;http://121.140.182.219/bootstrap?cid=%s",sCommunityID);
+	ShowMOTDPanel(client, "TTT Rules", sURL, MOTDPANEL_TYPE_URL);
+					
+					
+}
+public Action Command_ShowRule(int client, int args)
+{
+	if (!TTT_IsClientValid(client))
+	{
+		return Plugin_Handled;
+	}
+    
+    	ShowRules(client, 0);
+    
+    	return Plugin_Handled;
+}
 public Action Command_Karma(int client, int args)
 {
 	if (!TTT_IsClientValid(client))
@@ -755,6 +782,7 @@ public Action Event_RoundEndPre(Event event, const char[] name, bool dontBroadca
 	}
 }
 
+
 public Action Timer_SelectionCountdown(Handle hTimer)
 {
 	int timeLeft = RoundToFloor(g_fRealRoundStart - GetGameTime());
@@ -784,6 +812,56 @@ public Action Timer_SelectionCountdown(Handle hTimer)
 	return Plugin_Continue;
 }
 
+public void Set_KillerTarget()
+{
+	// 트레이터도 암살 대상에 포함 됨!!!
+	bool isSetKiller = false;
+	LoopValidClients(i) 
+	{	
+		g_KillTarget[i] = false;
+	}
+	
+	
+	int target = -1;
+	while(isSetKiller == false)
+	{
+		target = GetRandomInt(1, MAXPLAYERS + 1);
+		if (TTT_IsClientValid(i) == false)continue;
+		if (IsPlayerAlive(i)     == false)continue;	
+		if (TTT_GetClientrole(target) == TTT_TEAM_DETECTIVE) continue;		
+		if(TTT_GetClientrole(target)  == TTT_TEAM_INNOCENT || TTT_GetClientrole(target)  == TTT_TEAM_TRAITOR)
+		{
+			isSetKiller = true;
+			C_PrintToChat(killer, "당신은 암살대상 입니다... 그들에게 죽지 않기를 바랍니다.");
+		}
+		
+	}
+}
+public void Set_Killer() //g_KillTarget, g_Killer
+{
+	bool isSetKiller = false;
+	LoopValidClients(i) 
+	{	
+		g_Killer[i] = false;
+	}
+	
+	
+	int killer = -1;
+	while(isSetKiller == false)
+	{
+		killer = GetRandomInt(1, MAXPLAYERS + 1); //랜덤으로 1인선택
+		if (TTT_IsClientValid(i) == false)continue; //검증 
+		if (IsPlayerAlive(i) == false)    continue;	 //플레이어가 살아있어야함
+		if (TTT_GetClientrole(killer) == TTT_TEAM_DETECTIVE) continue; //탐정이어선 안됨 
+		if (TTT_GetClientrole(killer) == TTT_TEAM_TRAITOR) continue; // 트레이터여서도 안됨 
+		if(TTT_GetClientrole(killer) == TTT_TEAM_INNOCENT ) //이노센트인경우
+		{
+			isSetKiller = true;
+			C_PrintToChat(killer, "당신은 암살자입니다. 공지된 플레이어가 누군가에게 사살당할때 당신은 트레이터가 됩니다.");
+			break;
+		}
+	}
+}
 public Action Timer_Selection(Handle hTimer)
 {
 	g_bRoundEnding = false;
@@ -1010,6 +1088,8 @@ public Action Timer_Selection(Handle hTimer)
 	Call_PushCell(iTraitors);
 	Call_PushCell(iDetectives);
 	Call_Finish();
+	
+	Set_Killer();
 }
 
 int GetTCount(int iActivePlayers)
@@ -1786,10 +1866,13 @@ public int Menu_ShowWelcomeMenu(Menu menu, MenuAction action, int client, int pa
 				}
 				
 				kvRules.GetString("url", sValue, sizeof(sValue));
+				
+				
 				if (strlen(sValue) > 0)
 				{
 					char sURL[512];
 					Format(sURL, sizeof(sURL), "http://cola-team.com/franug/webshortcuts2.php?web=height=720,width=1280;franug_is_pro;%s", sValue);
+				
 					ShowMOTDPanel(client, "TTT Rules", sURL, MOTDPANEL_TYPE_URL);
 					
 					g_bKnowRules[client] = false;
@@ -2726,23 +2809,35 @@ stock void subtractKarma(int client, int karma, bool message = false)
 
 /*  SH Add ServerFunction TODO  */
 
+public void SetKiller()
+{
+	
+}
 public void TTT_OnRoundEnd(int winner)
 {
+	WinnerCheck(winner);
+	GameWinLog(winner);
+}
+
+public void WinnerCheck(int winner)
+{
+
 	LoopValidClients(clients)
 	{
 		if(TTT_IsClientValid(clients))
 		{
 			int role = TTT_GetClientRole(clients);
-			if( (role == winner && winner == TTT_TEAM_INNOCENT) ) PlayerWinRateUpdate(clients, false); //시민팀 승리시
-			else  PlayerWinRateUpdate(clients, true);
-  			
-  			if( (role == winner && winner == TTT_TEAM_TRAITOR) ) PlayerWinRateUpdate(clients, false);//트레이터 승리시
-			else PlayerWinRateUpdate(clients, true);
+			if(role == TTT_TEAM_DETECTIVE)
+		    	role = TTT_TEAM_INNOCENT; //Detective is Innocent !
+			
+			//이긴 팀에 속해있는경우
+			if((role == winner)) 
+		    PlayerWinRateUpdate(clients, false); //승리처리
+			else 
+  			PlayerWinRateUpdate(clients, true); //패배처리
 		}
 	}
-
 }
-
 
 stock void LoadClientRating(int userid)
 {
@@ -2822,14 +2917,14 @@ public void PlayerWinRateUpdate(int client, bool isLoser)
 	int mRole = TTT_GetClientRole(client);
 	if (mCurRating <= 1000)
 	{
-		mAddRating = GetRandomInt(40, 50);
+		mAddRating = GetRandomInt(17, 24);
 		if (mRole == TTT_TEAM_TRAITOR)mAddRating += 10;
 		mLoseRating = GetRandomInt(5, 10);
 	}
 	
 	if (mCurRating > 1000 && mCurRating <= 1500 )
 	{
-		mAddRating = GetRandomInt(20, 35);
+		mAddRating = GetRandomInt(20, 30);
 		if (mRole == TTT_TEAM_TRAITOR)mAddRating += 8; //8점 고정가산점
 		mLoseRating = GetRandomInt(7, 15);
 	}
@@ -2838,34 +2933,34 @@ public void PlayerWinRateUpdate(int client, bool isLoser)
 	{
 		mAddRating = GetRandomInt(15, 20);
 		if (mRole == TTT_TEAM_TRAITOR)mAddRating += 5;
-		mLoseRating = GetRandomInt(7, 15);
+		mLoseRating = GetRandomInt(7, 17);
 	}
 	
 	if (mCurRating > 2000 && mCurRating <= 2500 )
 	{
 		mAddRating = GetRandomInt(7, 15);
 		if (mRole == TTT_TEAM_TRAITOR)mAddRating += 3;
-		mLoseRating = GetRandomInt(7, 15);
+		mLoseRating = GetRandomInt(13 , 20);
 	}
 	
 	if (mCurRating > 2500 && mCurRating <= 2800 )
 	{
 		mAddRating = GetRandomInt(4, 9);
 		if (mRole == TTT_TEAM_TRAITOR) mAddRating += 1;
-		mLoseRating = GetRandomInt(10, 15);
+		mLoseRating = GetRandomInt(14, 23);
 	}
 	
 	if (mCurRating > 2800 && mCurRating <= 3400 )
 	{
 		mAddRating = GetRandomInt(2, 7);
 		if (mRole == TTT_TEAM_TRAITOR) mAddRating += 1;
-		mLoseRating = GetRandomInt(12, 20);
+		mLoseRating = GetRandomInt(15, 17);
 	}
 	
 	if (mCurRating > 3400)
 	{
 		mAddRating = GetRandomInt(1, 2);
-		mLoseRating = GetRandomInt(4, 10);
+		mLoseRating = GetRandomInt(9, 20);
 	}
 	
 	
@@ -3536,6 +3631,61 @@ public void SQL_OnClientPostAdminCheck(Handle owner, Handle hndl, const char[] e
 	}
 }
 
+
+stock void GameWinLog(int winTeam)
+{
+	 char mTime[64];
+	 int m = GetTime(); //GameEndItem
+	 IntToString(m, mTime, sizeof(mTime));
+	 
+	 char mGameId[64];
+	 Format(mGameId, sizeof(mGameId), "LOG_%s", mTime);
+		
+
+	 LoopValidClients(i)
+	 {	
+		char mID[64];
+		char m_sRole[32];
+		char m_sWinTeam[32];
+		int mGetRole = TTT_GetClientRole(i);
+		
+		if (mGetRole == TTT_TEAM_DETECTIVE)
+		m_sRole = "DETECTIVE";
+		
+		if (mGetRole == TTT_TEAM_INNOCENT)
+		m_sRole = "INNOCENT";
+		
+		if (mGetRole == TTT_TEAM_TRAITOR)
+		m_sRole = "TRAITOR";
+		
+		if (winTeam == TTT_TEAM_INNOCENT)
+		m_sWinTeam = "INNOCENT";
+		
+		if (winTeam == TTT_TEAM_TRAITOR)
+		m_sWinTeam = "TRAITOR";
+	    
+	      if (!GetClientAuthId(i, AuthId_SteamID64, mID, sizeof(mID)) && !IsFakeClient(i))
+	      continue; 
+	   
+ 	      if (!TTT_IsClientValid(i) ) 
+	      continue;
+	   
+ 	      if (TTT_GetClientRole(i) == TTT_TEAM_UNASSIGNED) 
+	      continue;
+		
+		if (IsFakeClient(i))
+		mID = "[BOT]";
+	    
+			   
+		char sQuery[256];
+		Format(sQuery, sizeof(sQuery), "INSERT INTO `ttt_win_log` (`community_id`, `game_id`, `user_role`, `win_team`, `record_rate`) VALUES (\"%s\", \"%s\", \"%s\", \"%s\", %d);", mID, mGameId, m_sRole, m_sWinTeam, g_WinRate[i]);
+		
+		if (g_dDB != null)
+		{
+			g_dDB.Query(Callback_WinLog, sQuery, GetClientUserId(i));
+		}
+	 }
+}
 
 
 stock void InsertPlayer(int userid)
