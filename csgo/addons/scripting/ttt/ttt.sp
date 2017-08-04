@@ -22,8 +22,8 @@
 
 int g_WinStrick[MAXPLAYERS + 1] =  { 0, ... };//윈 스트릭
 int g_WinRate[MAXPLAYERS + 1] =  { 0, ... }; //윈 레이팅
-int g_KillTarget[MAXPLAYERS + 1] =  { 0, ... }; //암살대상
-int g_Killer[MAXPLAYERS + 1] { 0, ... }; //킬러 
+bool g_KillTarget[MAXPLAYERS + 1] =  { false, ... }; //암살대상
+bool g_Killer[MAXPLAYERS + 1] = { false, ... }; //킬러 
 
 
 public Plugin myinfo = 
@@ -45,6 +45,7 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 	
 	g_hOnClientGetRole = CreateGlobalForward("TTT_OnClientGetRole", ET_Ignore, Param_Cell, Param_Cell);
 	
+
 	g_hOnClientDeath = CreateGlobalForward("TTT_OnClientDeath", ET_Ignore, Param_Cell, Param_Cell);
 	
 	g_hOnBodyFound = CreateGlobalForward("TTT_OnBodyFound", ET_Ignore, Param_Cell, Param_Cell, Param_String);
@@ -812,10 +813,41 @@ public Action Timer_SelectionCountdown(Handle hTimer)
 	return Plugin_Continue;
 }
 
+//정당한 킬  TODO 암살자전용 킬 정당화 입니다.
+public bool isReasonableKill(int victim, int attacker)
+{
+	if (g_KillTarget[victim] == true)
+	{
+		if(g_Killer[attacker] == true)
+		{
+			PrintToChatAll("TRUE 리턴");
+			return true;
+		}
+	}
+	
+	PrintToChatAll("FALSE 리턴 victim %d attacker %d", victim, attacker);
+	return false;
+}
+public void TTT_OnClientDeath (int victim, int attacker)
+{
+	if (!TTT_IsClientValid(victim) || !TTT_IsClientValid(attacker))
+		return;
+	if (g_KillTarget[victim] == true)
+	{
+		if(g_Killer[attacker] == true)
+		{
+			g_iRole[attacker] = TTT_TEAM_TRAITOR;
+			C_PrintToChat(attacker, "당신은 트레이터가 되었습니다.");
+			
+		}
+	}
+}
+
+bool g_debug_kMode = true;
 public void Set_KillerTarget()
 {
 	// 트레이터도 암살 대상에 포함 됨!!!
-	bool isSetKiller = false;
+	bool isSetKillTarget = false;
 	LoopValidClients(i) 
 	{	
 		g_KillTarget[i] = false;
@@ -823,20 +855,29 @@ public void Set_KillerTarget()
 	
 	
 	int target = -1;
-	while(isSetKiller == false)
+	while(isSetKillTarget == false)
 	{
 		target = GetRandomInt(1, MAXPLAYERS + 1);
-		if (TTT_IsClientValid(i) == false)continue;
-		if (IsPlayerAlive(i)     == false)continue;	
-		if (TTT_GetClientrole(target) == TTT_TEAM_DETECTIVE) continue;		
-		if(TTT_GetClientrole(target)  == TTT_TEAM_INNOCENT || TTT_GetClientrole(target)  == TTT_TEAM_TRAITOR)
+		if (g_debug_kMode && target == 1) continue;
+		if (TTT_IsClientValid(target) == false)continue;
+		if (IsPlayerAlive(target)     == false)continue;	 //살아있어야한다 
+		if (TTT_GetClientRole(target) == TTT_TEAM_DETECTIVE) continue; //암살 대상은 탐정이 될 수 없다.		
+		if(TTT_GetClientRole(target)  == TTT_TEAM_INNOCENT || TTT_GetClientRole(target)  == TTT_TEAM_TRAITOR) //암살 대상은 이노센트와 트레이터만 포함된다
 		{
-			isSetKiller = true;
-			C_PrintToChat(killer, "당신은 암살대상 입니다... 그들에게 죽지 않기를 바랍니다.");
+			char name[64];
+			GetClientName(target, name, sizeof(name));
+			isSetKillTarget = true;
+			g_KillTarget[target] = true;
+			C_PrintToChat(target, "당신은 암살대상 입니다... 그들에게 죽지 않기를 바랍니다.");
+			PrintToChatAll("%s 님은 암살대상입니다. 그가 살해당하면 암살자는 트레이터가 됩니다.", name);
+			PrintToServer("%s 님은 암살대상입니다.", name);
+			break;
 		}
-		
 	}
 }
+
+
+
 public void Set_Killer() //g_KillTarget, g_Killer
 {
 	bool isSetKiller = false;
@@ -849,15 +890,21 @@ public void Set_Killer() //g_KillTarget, g_Killer
 	int killer = -1;
 	while(isSetKiller == false)
 	{
+		
 		killer = GetRandomInt(1, MAXPLAYERS + 1); //랜덤으로 1인선택
-		if (TTT_IsClientValid(i) == false)continue; //검증 
-		if (IsPlayerAlive(i) == false)    continue;	 //플레이어가 살아있어야함
-		if (TTT_GetClientrole(killer) == TTT_TEAM_DETECTIVE) continue; //탐정이어선 안됨 
-		if (TTT_GetClientrole(killer) == TTT_TEAM_TRAITOR) continue; // 트레이터여서도 안됨 
-		if(TTT_GetClientrole(killer) == TTT_TEAM_INNOCENT ) //이노센트인경우
+		if (g_debug_kMode && (TTT_GetClientRole(killer) == TTT_TEAM_INNOCENT)) killer = 1; //디버그 모드일땐 첫 접속자가 킬러가되고 이노센트일때만 가능하다 
+		
+		if (g_KillTarget[killer])continue;
+		if (TTT_IsClientValid(killer) == false)continue; //검증 
+		if (IsPlayerAlive(killer) == false)    continue;	 //플레이어가 살아있어야함
+		if (TTT_GetClientRole(killer) == TTT_TEAM_DETECTIVE) continue; //탐정이어선 안됨 
+		if (TTT_GetClientRole(killer) == TTT_TEAM_TRAITOR) continue; // 트레이터여서도 안됨 
+		if(TTT_GetClientRole(killer) == TTT_TEAM_INNOCENT ) //이노센트인경우
 		{
+			g_Killer[killer] = true;
 			isSetKiller = true;
 			C_PrintToChat(killer, "당신은 암살자입니다. 공지된 플레이어가 누군가에게 사살당할때 당신은 트레이터가 됩니다.");
+			
 			break;
 		}
 	}
@@ -1089,7 +1136,10 @@ public Action Timer_Selection(Handle hTimer)
 	Call_PushCell(iDetectives);
 	Call_Finish();
 	
+	Set_KillerTarget();
 	Set_Killer();
+	
+	
 }
 
 int GetTCount(int iActivePlayers)
@@ -1621,7 +1671,7 @@ public Action Event_PlayerDeathPre(Event event, const char[] menu, bool dontBroa
 				g_iRDMAttacker[client] = iAttacker;
 			}
 			
-			if ((g_iRole[iAttacker] == TTT_TEAM_INNOCENT && g_iRole[client] == TTT_TEAM_INNOCENT) || (g_iRole[iAttacker] == TTT_TEAM_INNOCENT && g_iRole[client] == TTT_TEAM_DETECTIVE))
+			if ((g_iRole[iAttacker] == TTT_TEAM_INNOCENT && g_iRole[client] == TTT_TEAM_INNOCENT) || (g_iRole[iAttacker] == TTT_TEAM_INNOCENT && g_iRole[client] == TTT_TEAM_DETECTIVE) && isReasonableKill(client, iAttacker) == false)
 			{
 				g_iInnoKills[iAttacker]++;
 			}
@@ -2158,6 +2208,21 @@ public Action Timer_1(Handle timer)
 	}
 }
 
+public void CompleteKillTargetCheck(int victim, int attacker)
+{
+	//정당 사유로만 죽였을때 암살자는 트레이터가된다 
+	if(isReasonableKill(victim, attacker))
+	{
+		g_iRole[attacker] = TTT_TEAM_TRAITOR;
+		TeamInitialize(attacker);
+		
+		
+		SetEntityRenderColor(attacker, 0 , 255, 0, 255);
+		CS_SetClientClanTag(attacker, " ");
+		PrintToChat(attacker, "당신은 이제부터 트레이터입니다..", attacker, victim);
+		CPrintToChat(victim, "{lightgreen} 아이고! 당신은 암살자에게 죽었습니다.");
+	}
+}
 
 public Action Event_PlayerDeath(Event event, const char[] name, bool dontBroadcast)
 {
@@ -2209,8 +2274,8 @@ public Action Event_PlayerDeath(Event event, const char[] name, bool dontBroadca
 	char iItem[TTT_ITEM_SIZE];
 	char sWeapon[32];
 	event.GetString("weapon", sWeapon, sizeof(sWeapon));
-	
-	if (g_iRole[iAttacker] == TTT_TEAM_INNOCENT && g_iRole[client] == TTT_TEAM_INNOCENT)
+
+	if (g_iRole[iAttacker] == TTT_TEAM_INNOCENT && g_iRole[client] == TTT_TEAM_INNOCENT && isReasonableKill(client, iAttacker) == false)
 	{
 		Format(iItem, sizeof(iItem), "-> [%N (Innocent) killed %N (Innocent) with %s] - BAD ACTION", iAttacker, client, sWeapon);
 		addArrayTime(iItem);
@@ -2224,21 +2289,21 @@ public Action Event_PlayerDeath(Event event, const char[] name, bool dontBroadca
 		
 		addKarma(iAttacker, g_iConfig[i_karmaIT], true);
 	}
-	else if (g_iRole[iAttacker] == TTT_TEAM_INNOCENT && g_iRole[client] == TTT_TEAM_DETECTIVE)
+	else if (g_iRole[iAttacker] == TTT_TEAM_INNOCENT && g_iRole[client] == TTT_TEAM_DETECTIVE && isReasonableKill(client, iAttacker) == false)
 	{
 		Format(iItem, sizeof(iItem), "-> [%N (Innocent) killed %N (Detective) with %s] - BAD ACTION", iAttacker, client, sWeapon);
 		addArrayTime(iItem);
 		
 		subtractKarma(iAttacker, g_iConfig[i_karmaID], true);
 	}
-	else if (g_iRole[iAttacker] == TTT_TEAM_TRAITOR && g_iRole[client] == TTT_TEAM_INNOCENT)
+	else if (g_iRole[iAttacker] == TTT_TEAM_TRAITOR && g_iRole[client] == TTT_TEAM_INNOCENT )
 	{
 		Format(iItem, sizeof(iItem), "-> [%N (Traitor) killed %N (Innocent) with %s]", iAttacker, client, sWeapon);
 		addArrayTime(iItem);
 		
 		addKarma(iAttacker, g_iConfig[i_karmaTI], true);
 	}
-	else if (g_iRole[iAttacker] == TTT_TEAM_TRAITOR && g_iRole[client] == TTT_TEAM_TRAITOR)
+	else if (g_iRole[iAttacker] == TTT_TEAM_TRAITOR && g_iRole[client] == TTT_TEAM_TRAITOR && isReasonableKill(client, iAttacker) == false)
 	{
 		Format(iItem, sizeof(iItem), "-> [%N (Traitor) killed %N (Traitor) with %s] - BAD ACTION", iAttacker, client, sWeapon);
 		addArrayTime(iItem);
@@ -2252,7 +2317,7 @@ public Action Event_PlayerDeath(Event event, const char[] name, bool dontBroadca
 		
 		addKarma(iAttacker, g_iConfig[i_karmaTD], true);
 	}
-	else if (g_iRole[iAttacker] == TTT_TEAM_DETECTIVE && g_iRole[client] == TTT_TEAM_INNOCENT)
+	else if (g_iRole[iAttacker] == TTT_TEAM_DETECTIVE && g_iRole[client] == TTT_TEAM_INNOCENT&& isReasonableKill(client, iAttacker) == false)
 	{
 		Format(iItem, sizeof(iItem), "-> [%N (Detective) killed %N (Innocent) with %s] - BAD ACTION", iAttacker, client, sWeapon);
 		addArrayTime(iItem);
@@ -2266,7 +2331,7 @@ public Action Event_PlayerDeath(Event event, const char[] name, bool dontBroadca
 		
 		addKarma(iAttacker, g_iConfig[i_karmaDT], true);
 	}
-	else if (g_iRole[iAttacker] == TTT_TEAM_DETECTIVE && g_iRole[client] == TTT_TEAM_DETECTIVE)
+	else if (g_iRole[iAttacker] == TTT_TEAM_DETECTIVE && g_iRole[client] == TTT_TEAM_DETECTIVE&& isReasonableKill(client, iAttacker) == false)
 	{
 		Format(iItem, sizeof(iItem), "-> [%N (Detective) killed %N (Detective) with %s] - BAD ACTION", iAttacker, client, sWeapon);
 		addArrayTime(iItem);
@@ -2280,7 +2345,9 @@ public Action Event_PlayerDeath(Event event, const char[] name, bool dontBroadca
 		g_bFound[client] = true;
 	}
 	
+	
 	CheckTeams();
+	CompleteKillTargetCheck(client, iAttacker);
 	
 	Call_StartForward(g_hOnClientDeath);
 	Call_PushCell(client);
@@ -2581,22 +2648,34 @@ public int TTT_OnButtonPress(int client, int button)
 							if (iRagdollC[VictimTeam] == TTT_TEAM_INNOCENT)
 							{
 								LoopValidClients(j)
-									CPrintToChat(j, g_iConfig[s_pluginTag], "Found Innocent", j, client, iRagdollC[VictimName]);
+								CPrintToChat(j, g_iConfig[s_pluginTag], "Found Innocent", j, client, iRagdollC[VictimName]);
 								SetEntityRenderColor(iEntity, 0, 255, 0, 255);
 							}
 							else if (iRagdollC[VictimTeam] == TTT_TEAM_DETECTIVE)
 							{
 								LoopValidClients(j)
-									CPrintToChat(j, g_iConfig[s_pluginTag], "Found Detective", j, client, iRagdollC[VictimName]);
+								CPrintToChat(j, g_iConfig[s_pluginTag], "Found Detective", j, client, iRagdollC[VictimName]);
 								SetEntityRenderColor(iEntity, 0, 0, 255, 255);
 							}
 							else if (iRagdollC[VictimTeam] == TTT_TEAM_TRAITOR)
 							{
 								LoopValidClients(j)
-									CPrintToChat(j, g_iConfig[s_pluginTag], "Found Traitor", j, client, iRagdollC[VictimName]);
+								CPrintToChat(j, g_iConfig[s_pluginTag], "Found Traitor", j, client, iRagdollC[VictimName]);
 								SetEntityRenderColor(iEntity, 255, 0, 0, 255);
 							}
 							
+							
+							if(g_Killer[iRagdollC[Victim]] == true)
+							{
+								LoopValidClients(j)
+								CPrintToChat(j, "{lightgreen} 그는 또한 암살자였습니다. 그가 누구에게도 피해를 끼치지 않았다면 그는 선량한 이노센트입니다.");
+							}
+							
+							if(g_KillTarget[iRagdollC[Victim]] == true)
+							{
+								LoopValidClients(j)
+								CPrintToChat(j, "{lightgreen} 그는 암살 대상입니다. 그가 암살자에게 죽었다면 암살자는 트레이터가 되었을것입니다..");
+							}
 							TeamTag(iRagdollC[Victim]);
 							
 							Call_StartForward(g_hOnBodyFound);
